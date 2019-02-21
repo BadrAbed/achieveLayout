@@ -1780,16 +1780,16 @@ div.footer .social a i.fa-facebook {
 
 
 .split_right {
-    border-top: 2px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
     width: 2rem;
     position: absolute;
     right: 0rem;
 }
 .split_left {
-    border-top: 2px solid #d3d3d3;
-    width: 17rem;
+    border-top: 1px solid #d3d3d3;
+    width: -webkit-fill-available;
     position: absolute;
-    margin-right: 9.7rem;
+    left: 0;
 }
 
 

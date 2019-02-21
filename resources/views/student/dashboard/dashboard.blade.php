@@ -47,7 +47,7 @@
         {{-- //////////////////////// Points /////////////////////////// --}}
         <div class="points">
             <div class="row">
-                <div class="col-md-4 all">
+                <div class="col-md-4 col-sm-12 all">
                     <div class="split_right"></div>
                     <div class="split_left"></div>
                     <div class="col-md-6 right">
@@ -65,7 +65,7 @@
 
                     $yesterday=date('Y-m-d',strtotime("-1 days"));
                 @endphp
-                <div class="col-md-4 today">
+                <div class="col-md-4 col-sm-12 today">
                     <div class="split_right"></div>
                     <div class="split_left"></div>
                     <div class="col-md-6 right">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 past">
+                <div class="col-md-4 col-sm-12 past">
                     <div class="split_right"></div>
                     <div class="split_left"></div>
                     <div class="col-md-6 right">
@@ -98,14 +98,14 @@
         {{-- //////////////////////// Level Par /////////////////////////// --}}
         <div class="level">
             <div class="row">
-                <div class="col-md-2 right">
+                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-12 right">
                     <img src="{{asset('Studentpublic/images/round.png')}}" class="" alt="">
                     <span class="pom"></span>
                     <div class="col-md-12">
                         <span>مستوي التقدم  </span>
                     </div>
                 </div>
-                <div class="col-md-10 left">
+                <div class="col-xl-10 col-lg-10 col-md-9 col-sm-12 left">
                     <div id="myProgress">
                         <div class="toolip" data-toggle="tooltip" style="width: {{$PogressPrecentge}}%">
                             <div class="arrow"></div>

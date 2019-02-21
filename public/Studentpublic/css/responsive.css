@@ -41,6 +41,43 @@
         margin: 0 0rem;
         float: none;
     }
+    .StudentDashboard .points .right span {
+        font-size: 40pt;
+        top: 2.5rem;
+        right: 3.5rem;
+    }
+    .StudentDashboard .points .left .img img {
+        width: 90px;
+        height: 93px;
+    }
+    .StudentDashboard .points .left .img {
+        width: 133px;
+        height: 133px;
+    }
+    .StudentDashboard .points .right h3{
+        font-size: 15pt;
+        padding: 0;
+    }
+    .StudentDashboard .points .right img {
+        height: 136px;
+    }
+    .StudentDashboard .points .col-md-4 {
+         border-left: none;
+        margin-bottom: 2rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 1rem 1rem;
+    }
+    .StudentDashboard .level .right span.pom,
+    .StudentDashboard .level .right  img {
+       display: none;
+    }
+    .StudentDashboard .level .col-md-12 {
+        text-align: center;
+    }
+    .StudentDashboard .level .left {
+        margin: 1rem auto;
+    }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
@@ -52,8 +89,29 @@
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* Footer Page */
+    div.footer .row {
+        padding: 1rem 0;
+    }
+    div.footer .row div:first-child {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    div.footer h5{
+        text-align: center;
+    }
+    #return-to-top {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6rem;
+        margin-left: 2rem;
+    }
+    #return-to-top i {
+        margin: 0.5rem auto;
+        margin-top: 0.2rem;
+        font-size: 2.5rem;
+    }
+    /* #Footer Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 }
 /* ====================================================================================== 
@@ -100,6 +158,43 @@ Small devices (landscape phones, 576px and up)
         margin: 0 0rem;
         float: none;
     }
+    .StudentDashboard .points .right span {
+        font-size: 40pt;
+        top: 2.5rem;
+        right: 3.5rem;
+    }
+    .StudentDashboard .points .left .img img {
+        width: 90px;
+        height: 93px;
+    }
+    .StudentDashboard .points .left .img {
+        width: 133px;
+        height: 133px;
+    }
+    .StudentDashboard .points .right h3{
+        font-size: 15pt;
+        padding: 0;
+    }
+    .StudentDashboard .points .right img {
+        height: 136px;
+    }
+    .StudentDashboard .points .col-md-4 {
+         border-left: none;
+        margin-bottom: 2rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 1rem 1rem;
+    }
+    .StudentDashboard .level .right span.pom,
+    .StudentDashboard .level .right  img {
+       display: none;
+    }
+    .StudentDashboard .level .col-md-12 {
+        text-align: center;
+    }
+    .StudentDashboard .level .left {
+        margin: 1rem auto;
+    }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
@@ -111,9 +206,32 @@ Small devices (landscape phones, 576px and up)
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Footer Page */
+    div.footer .row {
+        padding: 1rem 0;
+    }
+    div.footer .row div:first-child {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    div.footer h5{
+        text-align: center;
+    }
+    #return-to-top {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6rem;
+        margin-left: 2rem;
+    }
+    #return-to-top i {
+        margin: 0.5rem auto;
+        margin-top: 0.2rem;
+        font-size: 2.5rem;
+    }
+    /* #Footer Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 }
-
 /* ====================================================================================== 
 --> md = Medium ≥768px
 --> Max container width 720px
@@ -188,6 +306,47 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
         margin: 0 1rem;
         margin-left: 0;
     }
+    .StudentDashboard .points .right span {
+        font-size: 25pt;
+        right: 1.5rem;
+        top: 2rem;
+    }
+    .StudentDashboard .points .left .img img {
+        width: 70px;
+        height: 73px;
+    }
+    .StudentDashboard .points .left .img {
+        width: 90px;
+        height: 110px;
+    }
+    .StudentDashboard .points .right h3{
+        font-size: 8pt;
+        padding: 0;
+    }
+    .StudentDashboard .points .right img {
+        height: 115px;
+    }
+    .StudentDashboard .points .col-md-4 {
+        border-left: 1px solid #d3d3d3; 
+        margin-bottom: 0rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 2rem 3rem;
+    }
+    .StudentDashboard .level .right span.pom {
+        right: 0.5rem;
+        bottom: 2.5rem;
+    }
+    .StudentDashboard .level .right span.pom,
+    .StudentDashboard .level .right  img {
+       display: block;
+    }
+    .StudentDashboard .level .col-md-12 {
+        text-align: start;
+    }
+    .StudentDashboard .level .left {
+        margin: auto;
+    }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
@@ -196,9 +355,32 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Footer Page */
+    div.footer .row {
+        padding: 1rem 0;
+    }
+    div.footer .row div:first-child {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    div.footer h5{
+        text-align: center;
+    }
+    #return-to-top {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6rem;
+        margin-left: 2rem;
+    }
+    #return-to-top i {
+        margin: 0.5rem auto;
+        margin-top: 0.2rem;
+        font-size: 2.5rem;
+    }
+    /* #Footer Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 }
-
 /*  ======================================================================================
 --> lg = Large ≥992px
 --> Max container width 960px
@@ -244,6 +426,47 @@ Large devices (desktops, 992px and up)
         margin: 0 1rem;
         margin-left: 0;
     }
+    .StudentDashboard .points .right span {
+        font-size: 30pt;
+        right: 2.5rem;
+        top: 2.5rem;
+    }
+    .StudentDashboard .points .left .img img {
+        width: 80px;
+        height: 83px;
+    }
+    .StudentDashboard .points .left .img {
+        width: 120px;
+        height: 120px;
+    }
+    .StudentDashboard .points .right h3{
+        font-size: 11pt;
+        padding: 0;
+    }
+    .StudentDashboard .points .right img {
+        height: 136px;
+    }
+    .StudentDashboard .points .col-md-4 {
+        border-left: 1px solid #d3d3d3; 
+        margin-bottom: 0rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 2rem 3rem;
+    }
+    .StudentDashboard .level .right span.pom {
+        right: 0.5rem;
+        bottom: 2.5rem;
+    }
+    .StudentDashboard .level .right span.pom,
+    .StudentDashboard .level .right  img {
+       display: block;
+    }
+    .StudentDashboard .level .col-md-12 {
+        text-align: start;
+    }
+    .StudentDashboard .level .left {
+        margin: auto;
+    }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
@@ -254,7 +477,6 @@ Large devices (desktops, 992px and up)
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 }
-
 /* ======================================================================================
 --> xl = Extra large ≥1200px
 --> Max container width 1140px
@@ -300,6 +522,46 @@ Extra large devices (large desktops, 1200px and up)
         margin: 0 1rem;
         margin-left: 0;
     }
+    .StudentDashboard .points .right h3 {
+        font-size: 11pt;
+    }
+    .StudentDashboard .points .right span {
+        right: 3.5rem;
+        top: 2.5rem;
+        font-size: 40pt;
+    }
+    .StudentDashboard .points .left .img img {
+        width: 90px;
+        height: 93px;
+    }
+    .StudentDashboard .points .left .img {
+        width: 133px;
+        height: 133px;
+    }
+    .StudentDashboard .points .right img {
+        height: 136px;
+    }
+    .StudentDashboard .points .col-md-4 {
+        border-left: 1px solid #d3d3d3; 
+        margin-bottom: 0rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 2rem 3rem;
+    }
+    .StudentDashboard .level .right span.pom {
+        right: 0.5rem;
+        bottom: 2.5rem;
+    }
+    .StudentDashboard .level .right span.pom,
+    .StudentDashboard .level .right  img {
+       display: block;
+    }
+    .StudentDashboard .level .col-md-12 {
+        text-align: start;
+    }
+    .StudentDashboard .level .left {
+        margin: auto;
+    }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
@@ -310,11 +572,7 @@ Extra large devices (large desktops, 1200px and up)
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     
 }
-
-
-
 /* ======================================================================================
-
 Custom media queries
 */
 
@@ -352,6 +610,46 @@ Custom media queries
         padding: 1rem;
         margin: 0 1rem;
         margin-left: 0;
+    }
+    .StudentDashboard .points .right h3 {
+        font-size: 12pt;
+    }
+    .StudentDashboard .points .right span {
+        right: 3.5rem;
+        top: 2.5rem;
+        font-size: 40pt;
+    }
+    .StudentDashboard .points .left .img img {
+        width: 90px;
+        height: 93px;
+    }
+    .StudentDashboard .points .left .img {
+        width: 133px;
+        height: 133px;
+    }
+    .StudentDashboard .points .right img {
+        height: 136px;
+    }
+    .StudentDashboard .points .col-md-4 {
+        border-left: 1px solid #d3d3d3; 
+        margin-bottom: 0rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 2rem 3rem;
+    }
+    .StudentDashboard .level .right span.pom {
+        right: 0.5rem;
+        bottom: 2.5rem;
+    }
+    .StudentDashboard .level .right span.pom,
+    .StudentDashboard .level .right  img {
+       display: block;
+    }
+    .StudentDashboard .level .col-md-12 {
+        text-align: start;
+    }
+    .StudentDashboard .level .left {
+        margin: auto;
     }
     /* #studentDashboard Page */
 }

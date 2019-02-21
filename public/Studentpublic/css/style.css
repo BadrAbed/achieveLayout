@@ -419,34 +419,9 @@ a {
     box-shadow: none;
 }
 
-@media (max-width: 991px) {
-    .inner {
-        width: 400px;
-        left: 4%;
-    }
-}
 
-@media (max-width: 767px) {
-    .inner {
-        width: 100%;
-        left: 0;
-    }
-    .image-1,
-    .image-2 {
-        display: none;
-    }
-    form {
-        padding: 35px;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -ms-box-shadow: none;
-        -o-box-shadow: none;
-    }
-    .wrapper {
-        background: none;
-    }
-}
+
+
 
 
 /*# sourceMappingURL=style.css.map */
