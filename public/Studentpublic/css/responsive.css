@@ -1,0 +1,219 @@
+/*
+--> xs = Extra small <576px
+--> Max container width None (auto)
+*/
+@media (max-width: 576px) { 
+    /* Login Page */
+    .login_inner {
+        width: 90% !important;
+        margin: auto 0;
+    }
+    .login_form {
+        margin: 0;
+    }
+    .login_form form {
+        padding-right: 0rem;
+    }
+    .login_form .left {
+        display: none;
+    }
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+}
+/* ====================================================================================== 
+--> sm = Small ≥576px
+--> Max container width 540px
+Small devices (landscape phones, 576px and up) 
+*/
+@media (min-width: 576px) {  
+    /* Login Page */
+    .login_inner {
+        width: 90% !important;
+        margin: auto 0;
+    }
+    .login_form {
+        margin: 0;
+    }
+    .login_form form {
+        padding-right: 0rem;
+    }
+    .login_form .left {
+        display: none;
+    }
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+}
+
+/* ====================================================================================== 
+--> md = Medium ≥768px
+--> Max container width 720px
+Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint 
+*/
+@media (min-width: 768px) {  
+    /* Login Page */
+    .login_inner {
+        width: 90% !important;
+    }
+    .img2 {
+        width: 340px;
+        height: 280px;
+    }
+    .reg .img2{
+        top: 12rem;
+        left: 155px;
+    }
+    .login_form .left {
+        display: block;
+    }
+    .login_form form {
+        padding-right: 1rem;
+    }
+    .reg .login_form form {
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
+    .login_form .left {
+        height: 500px;
+    }
+    .reg .login_form .left {
+        height: auto;
+        display: none;
+    }
+    .login_form .login_btn {
+        margin-top: 0;
+    }
+    .login_form .reg .btn {
+        margin-left: 0.1rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+}
+
+/*  ======================================================================================
+--> lg = Large ≥992px
+--> Max container width 960px
+Large devices (desktops, 992px and up) 
+*/
+@media (min-width: 992px) { 
+    /* Login Page */
+    .login_inner {
+        width: 90% !important;
+    }
+    .login_form .left {
+        display: block;
+    }
+    .reg .login_form .left {
+        display: block;
+    }
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+}
+
+/* ======================================================================================
+--> xl = Extra large ≥1200px
+--> Max container width 1140px
+Extra large devices (large desktops, 1200px and up) 
+*/
+@media (max-width: 1500px) and (min-width: 1200px){  
+    /* Login Page */
+    .login_inner.reg {
+        width: 75% !important;
+    }
+    .login_inner {
+        width: 63% !important;
+    }
+    .login_form .left {
+        display: block;
+    }
+    .reg .login_form .left {
+        display: block;
+    }
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /*  Page */
+    /* # Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    
+}
+
+
+
+/* ======================================================================================
+
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (min-width: 1501px) { 
+    .login_inner {
+        width: 50% !important;
+    }
+    .login_inner.reg {
+        width: 60% !important;
+    }
+    .reg .login_form .left {
+        display: block;
+    }
+}

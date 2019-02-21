@@ -66,10 +66,10 @@
                             <div class="tab-content" id="readtextnormal">
 
                                 {{--<div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve">--}}
-                                    {{--<a rel="nofollow" class="rsbtn_play" accesskey="L" title="ReadSpeaker webReader إستمع إلى هذه الصفحةِ مستخدماً" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=3&amp;lang=ar_ar&amp;voice=Amir&amp;readid=readtextnormal&amp;url=<?php echo urlencode("http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]); ?>">--}}
-                                        {{--<span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>استمع</span></span></span>--}}
-                                        {{--<span class="rsbtn_right rsimg rsplay rspart"></span>--}}
-                                    {{--</a>--}}
+                                {{--<a rel="nofollow" class="rsbtn_play" accesskey="L" title="ReadSpeaker webReader إستمع إلى هذه الصفحةِ مستخدماً" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=3&amp;lang=ar_ar&amp;voice=Amir&amp;readid=readtextnormal&amp;url=<?php echo urlencode("http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]); ?>">--}}
+                                {{--<span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>استمع</span></span></span>--}}
+                                {{--<span class="rsbtn_right rsimg rsplay rspart"></span>--}}
+                                {{--</a>--}}
                                 {{--</div>--}}
                                 @for($i=0;$i<count($normalContentArr);$i++)
 

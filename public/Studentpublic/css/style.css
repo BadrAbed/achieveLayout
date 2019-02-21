@@ -150,7 +150,8 @@ a {
     margin: 1.2rem 0;
 }
 
-.login_form input {
+.login_form input,
+.login_form select {
     background: none;
     color: #000;
     font-size: 12pt;
@@ -165,8 +166,12 @@ a {
     margin: 0;
     font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
 }
+.login_form select{
+    padding: 1rem; 
+}
 
-.login_form input:focus {
+.login_form input:focus,
+.login_form select:focus {
     outline: none;
     border-bottom: 1px solid #79cb88;
 }
