@@ -1,0 +1,1863 @@
+/*=================== fonts ====================*/
+
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:400,600");
+
+/*---------------------------------------------------- */
+
+
+/*----------------------------------------------------*/
+
+
+/*---------------------------------------------------- */
+
+
+/*----------------------------------------------------*/
+
+body {
+    line-height: 25px;
+    font-size: 16px;
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    color: #777777;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #222222;
+}
+
+.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+/*========================================================== */
+
+
+/*# Header */
+
+#header {
+    direction: rtl;
+    display: block;
+    padding: 1rem 0;
+    background: #fff;
+    z-index: 10;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 9px 15px 9px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#header .row {
+    margin: auto;
+    width: 85%;
+}
+
+#header a.logo {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+#header .left {
+    margin: auto;
+}
+
+#header .left .links {
+    display: inline-flex;
+    margin: 0.5rem 0;
+}
+
+#header .left .links a {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 13pt;
+    text-align: center;
+}
+
+#header .left .links a:first-child {
+    color: rgba(255, 255, 255, 255);
+    background: #7fbb50;
+    border: 1px solid #7fbb50;
+    padding: 0.2rem 4rem;
+    margin-left: 1rem;
+}
+
+#header .left .links a:last-child {
+    color: rgba(175, 173, 173, 255);
+    background: #fff;
+    border: 1px solid rgba(175, 173, 173, 255);
+    padding: 0.2rem 1rem;
+    padding-left: 2rem;
+}
+
+#header .left .links a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+}
+
+#header ul#menu {
+    margin: 0;
+    padding: 0 10px;
+    background: #fff;
+    color: rgba(35, 31, 32, 255);
+    display: inline;
+    float: left;
+}
+
+#header ul#menu>li img.user {
+    width: 50px;
+    height: 50px;
+}
+
+#header ul#menu>hr {
+    border: none;
+    border-left: 2px solid #7fbb50;
+    height: 30px;
+    width: 1px;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+#header ul#menu>li {
+    float: left;
+    list-style-type: none;
+    position: relative;
+    font-family: Arial-BoldMT, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 12pt;
+    color: rgba(35, 31, 32, 255);
+    text-align: justify;
+}
+
+#header label {
+    position: relative;
+    display: block;
+    padding: 0 18px 0 12px;
+    line-height: 3em;
+    cursor: pointer;
+}
+
+#header label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 43%;
+    right: -3px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #f38055;
+    border-bottom: 0 solid rgba(255, 255, 255, .5);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transition: border-bottom .1s, border-top .1s .1s;
+}
+
+
+/* #header label:hover,
+#header input:checked~label {
+    background: rgba(0, 0, 0, .3);
+} */
+
+#header input:checked~label:after {
+    border-top: 0 solid rgba(255, 255, 255, .5);
+    border-bottom: 8px solid #f38055;
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+#header input {
+    display: none
+}
+
+#header input:checked~ul.submenu {
+    max-height: 300px;
+    width: 180px;
+    transition: max-height 0.5s ease-in;
+}
+
+#header ul.submenu {
+    width: 180px;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background: #444;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+    min-width: 100%;
+}
+
+#header ul.submenu li a {
+    display: block;
+    padding: 12px;
+    color: #ddd;
+    text-decoration: none;
+    box-shadow: 0 -1px rgba(0, 0, 0, .5) inset;
+    transition: background .3s;
+    white-space: nowrap;
+}
+
+#header ul.submenu li a:hover {
+    background: rgba(0, 0, 0, .3);
+}
+
+
+/*========================================================== */
+
+
+/*---------------------------------------------------- */
+
+
+/* #GENERAL */
+
+a.lesson {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    float: left;
+    text-align: center;
+    background: #7ebe5b;
+    color: #fff;
+    padding: 1rem;
+    margin: 0 1rem;
+    margin-left: 0;
+}
+div.bg {
+    background-repeat: no-repeat;
+    background-image: url(../images/layer.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0rem;
+}
+
+#myProgress {
+    width: 95%;
+    background-color: #fff;
+    height: 25px;
+    border: 0px solid #fff;
+    border-radius: 10px;
+}
+
+.toolip {
+    position: relative;
+    float: right;
+    z-index: 1070;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.9;
+    top: -20px;
+    left: 0;
+    display: block;
+    padding: 5px 0;
+    margin-top: -3px;
+}
+
+.arrow {
+    left: -1%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #f6956f;
+    top: 1px;
+}
+
+.inner {
+    background-color: transparent;
+    max-width: 200px;
+    width: auto;
+    font-family: HarabaraMaisBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 16pt;
+    color: rgba(24, 24, 24, 255);
+    position: absolute;
+    top: -29px;
+    text-align: center;
+    padding: 0;
+    left: -1%;
+}
+
+#myBar {
+    width: 39%;
+    height: 25px;
+    background-color: #f6956f;
+    text-align: center;
+    color: white;
+    border: 1px solid #f6956f;
+    border-radius: 30px;
+}
+/*---------------------------------------------------- */
+
+
+/* breadcrumb */
+
+.breadcrumb {
+    display: block;
+    direction: rtl;
+    background-repeat: no-repeat;
+    background-image: url(../images/breadBg.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.breadcrumb .row {
+    margin: auto;
+    width: 85%;
+}
+
+.breadcrumb ul {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: transparent;
+}
+
+.breadcrumb ul li {
+    display: inline;
+}
+
+.breadcrumb ul li+li:before {
+    padding: 8px;
+    color: #fff;
+    content: "/\00a0";
+    font-size: 1.5rem;
+}
+
+.breadcrumb ul li a {
+    text-decoration: none;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 18pt;
+    color: #fff;
+}
+
+.breadcrumb ul li a:hover {
+    color: #7fbb50;
+    text-decoration: underline;
+}
+
+
+/*---------------------------------------------------- */
+
+
+/* StudentDashboard */
+
+.StudentDashboard {
+    direction: rtl;
+    padding: 0;
+}
+
+.StudentDashboard .lessons,
+.StudentDashboard .points,
+.StudentDashboard .levels,
+.StudentDashboard .gallery {
+    padding: 2rem 0;
+}
+
+.StudentDashboard .row {
+    margin: auto;
+    width: 70%;
+}
+
+.StudentDashboard .lessons {
+    background: #f1f1f1;
+}
+
+.StudentDashboard .lessons .square span {
+    position: absolute;
+    top: 0.7rem;
+    right: 0;
+    border: 1px solid #121f28;
+    padding: 0;
+    height: 223px;
+    width: 315px;
+}
+
+.StudentDashboard .lessons .square img {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 85%;
+    height: 250px;
+    max-height: 250px;
+    margin: auto;
+}
+
+.StudentDashboard .lessons .left h2 {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 22pt;
+    color: rgba(46, 101, 136, 255);
+    text-align: justify;
+    margin-right: 1rem;
+}
+
+.StudentDashboard .lessons .left p {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    word-spacing: 2px;
+    color: rgba(35, 31, 32, 255);
+    text-align: justify;
+    padding: 1rem 0;
+    max-width: 100%;
+    line-height: 2rem;
+    min-height: 190px;
+}
+
+.StudentDashboard .lessons .left a {
+    display: inline-block;
+}
+.StudentDashboard .lessons .left a.lesson img {
+    width: 50px;
+    height: 35px;
+    margin-left: 0.5rem;
+}
+.StudentDashboard .lessons .left {
+    padding-left: 0;
+}
+
+.StudentDashboard .lessons .left a.icon {
+    background: rgba(46, 101, 136, 255);
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    float: right;
+}
+
+.StudentDashboard .points {
+    background: #fff;
+}
+
+.StudentDashboard .points .row {
+    border: 1px solid #d3d3d3;
+    border-left: none;
+    border-right: none;
+    border-top: 0;
+}
+
+.StudentDashboard .points .col-md-4 {
+    display: inline-flex;
+    border-left: 1px solid #d3d3d3;
+    position: relative;
+}
+
+.StudentDashboard .points .col-md-4:last-child {
+    border-left: none;
+}
+
+.StudentDashboard .points .left {
+    text-align: center;
+}
+
+.StudentDashboard .points .left .img {
+    background: red;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 133px;
+    height: 133px;
+
+}
+.StudentDashboard .points .left .img  img {
+    width: 90px;
+    height: 93px;
+}
+.StudentDashboard .points .right img {
+    position: relative;
+    bottom: 0.5rem;
+    width: 143px;
+    height: 136px;
+    max-height: 136px;
+    margin: 0rem;
+}
+
+.StudentDashboard .points .right span {
+    position: absolute;
+    top: 2.5rem;
+    right: 3.5rem;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    font-family: BebasNeueBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 40pt;
+    color: rgba(80, 191, 234, 255);
+    width: 48px;
+    bottom: 0;
+    height: 48px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.StudentDashboard .points .right h3 {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 15pt;
+    color: rgba(106, 106, 106, 255);
+    text-align: start;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 0 0.8rem;
+}
+
+.StudentDashboard .points .all .left .img {
+    background: #50bfea;
+}
+
+.StudentDashboard .points .today .left .img {
+    background: #ee5250;
+}
+
+.StudentDashboard .points .past .left .img {
+    background: #5ed3b6;
+}
+
+.StudentDashboard .level .row {
+    background: #ebebeb;
+    padding: 2rem 3rem;
+    padding-bottom: 1rem;
+}
+
+.StudentDashboard .level .right span.pom {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(../images/level.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    width: 109px;
+    height: 122px;
+    left: 0;
+    right: 0.5rem;
+    bottom: 2.5rem;
+}
+.StudentDashboard .level .right img {
+    position: relative;
+}
+
+.StudentDashboard .level .col-md-12 {
+    display: block;
+    padding: 0;
+}
+
+.StudentDashboard .level .col-md-12 span {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 12pt;
+    color: rgba(30, 47, 58, 255);
+    text-align: justify;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.StudentDashboard .level .col-md-12 span.num {
+    font-family: HarabaraMaisBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 20pt;
+    color: rgba(244, 132, 90, 255);
+    float: left;
+    margin-left: 3.5rem;
+}
+
+.StudentDashboard .level .left {
+    margin: auto;
+    top: 1.5rem;
+}
+
+/* #myProgress {
+    width: 95%;
+    background-color: #e9ecef;
+    height: 25px;
+    border: 0px solid #e9ecef;
+    border-radius: 10px;
+} */
+
+.toolip {
+    position: relative;
+    float: right;
+    z-index: 1070;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.9;
+    top: -20px;
+    left: 0;
+    display: block;
+    padding: 5px 0;
+    margin-top: -3px;
+}
+
+.arrow {
+    left: -1%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #f6956f;
+    top: 1px;
+}
+
+.inner {
+    background-color: transparent;
+    /* max-width: 200px; */
+    width: auto;
+    font-family: HarabaraMaisBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 16pt;
+    color: rgba(24, 24, 24, 255);
+    /* position: absolute; */
+    /* top: -29px; */
+    /* text-align: center; */
+    /* padding: 0; */
+    /* left: -1%; */
+}
+
+#myBar {
+    width: 39%;
+    height: 25px;
+    background-color: #80ba4c;
+    text-align: center;
+    color: white;
+    border: 1px solid #80ba4c;
+    border-radius: 30px;
+}
+
+.StudentDashboard .gallery {
+    position: relative;
+}
+
+.StudentDashboard .gallery .row {
+    padding: 2rem 2rem;
+    border: 1px solid #d3d3d3;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0;
+}
+
+.StudentDashboard .gallery .row .imgs {
+    height: 128px;
+    overflow: hidden;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+.StudentDashboard .gallery .row .imgs .slide {
+    width: 204px;
+    height: 128px;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b5b5b5;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.StudentDashboard .gallery .row .imgs img {
+    width: 100%;
+    height: 100%;
+}
+
+.StudentDashboard .gallery .row .imgs .slide:hover .content-overlay {
+    opacity: 1;
+}
+
+.StudentDashboard .gallery .row .imgs .slide .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.StudentDashboard .gallery .row .imgs .slide .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.StudentDashboard .gallery .row .slide:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.StudentDashboard .gallery .row .imgs h3 {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 15pt;
+    color: #fff;
+}
+
+.StudentDashboard .gallery .row .arrows {
+    display: inline-flex;
+    justify-content: space-between;
+    height: 0;
+    position: absolute;
+    width: 67%;
+    top: 0;
+    bottom: 12rem;
+    margin: auto;
+}
+
+.StudentDashboard .gallery .row .arrows i {
+    background-color: transparent;
+    color: #b5b5b5;
+    cursor: pointer;
+    font-size: 5rem;
+}
+
+.StudentDashboard .gallery .row .arrows .prev {
+}
+
+.StudentDashboard .gallery .row .arrows .next {
+}
+
+.dots {
+    margin: 3rem auto;
+    width: 100%;
+    text-align: center;
+}
+
+.dots .dot {
+    background-color: #b5b5b5;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin: 0 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.dots .dot:hover {
+    background-color: #7ebe5b;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+    position: relative;
+    top: 0rem;
+    bottom: 0;
+    left: 0rem;
+    right: 0;
+    margin: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.dots .dot span {
+    border: 2px solid #7ebe5b;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    position: absolute;
+    top: 0rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-right: -6px;
+}
+
+
+/*---------------------------------------------------- */
+
+
+/* # Student  Lessons */
+
+
+.table_lessons {
+    direction: rtl;
+    position: relative;
+}
+
+.table_lessons .row {
+    margin: auto;
+    width: 70%;
+    position: relative;
+}
+
+.table_lessons .header {
+    padding-right: 4rem;
+    margin: 0rem 0;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding-top: 6rem;
+}
+
+.table_lessons .header img {
+    background: #7fbc53;
+    width: 83px;
+    height: 83px;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+.table_lessons .table-users{
+    margin: 0;
+    background: #fff;
+    padding: 1.5rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.table_lessons .table-users,
+.table_lessons .table-users table {
+    width: 100%;
+}
+
+.table_lessons .header span {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 25pt;
+    color: rgba(20, 36, 43, 255);
+    text-align: center;
+}
+
+.table_lessons table .main_row {
+    background: #e2e2e2;
+}
+
+.table_lessons table .main_row th {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 13pt;
+    color: rgba(27, 97, 127, 255);
+    text-align: center;
+    padding: 1.5rem 0.2rem;
+}
+
+.table_lessons table .main_row th:first-child {
+    padding-right: 7rem;
+    text-align: start;
+}
+.table_lessons table .details {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.table_lessons table .details .img,
+.table_lessons table .details .name {
+    display: inline-block;
+}
+
+.table_lessons table .details .img {
+    padding-right: 0;
+    text-align: center;
+}
+
+.table_lessons table .details .name {
+    float: left;
+    margin: auto;
+}
+
+.table_lessons table .details img {
+    width: 180px;
+    height: 160px;
+}
+
+.table_lessons table .details p {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 12pt;
+    color: rgba(0, 0, 0, 255);
+    text-align: start;
+    width: 500px;
+    height: 150px;
+    max-height: 125px;
+    line-height: 2rem;
+    margin-top: 0rem;
+    overflow: hidden;
+}
+
+.table_lessons table .details .name h5 {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 17pt;
+    color: rgba(27, 97, 127, 255);
+    padding: 0 1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.table_lessons table .details td {
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.table_lessons table .details td:not(:first-child) {
+    font-family: ArialMT, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 13pt;
+    color: rgba(0, 0, 0, 255);
+    text-align: center;
+}
+
+.table_lessons table .details td.icon {
+    color: #1b5e8f;
+    font-size: 1.5rem;
+}
+.table_lessons table .details td.icon i.fa.fa-times-circle {
+    color: rgba(0, 0, 0, 255);
+}
+.table_lessons table .details.progress2 {
+    color: #fff;
+    background: #7cc573;
+}
+
+.table_lessons table .details.progress2 .name h5 {
+    color: #fff;
+}
+
+.table_lessons table .details.progress2 p {
+    color: #fff;
+}
+
+.table_lessons table .details.progress2 td:not(:first-child) {
+    color: #fff;
+}
+
+.table_lessons table .details.progress2 td.icon {
+    color: #fff;
+}
+
+
+/*---------------------------------------------------- */
+
+
+/*# Student   View lesson */
+
+.s_viewLesson {
+    direction: rtl;
+    position: relative;
+    min-height: 750px;
+}
+
+.s_viewLesson .row {
+    margin: 0rem auto;
+    width: 70%;
+    position: relative;
+}
+.s_viewLesson .top {
+    padding-right: 2rem;
+    margin: 0rem auto;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+}
+.s_viewLesson .top .right {
+    margin: auto;
+}
+.s_viewLesson .top .left{
+    text-align: left;
+    padding-left: 0;
+}
+
+.s_viewLesson .top .right i {
+    color: #7dc165;
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+}
+
+.s_viewLesson .top .right span {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 25pt;
+    color: rgba(20, 36, 43, 255);
+    text-align: center;
+}
+.s_viewLesson .bottom {
+    background: #fff;
+    padding: 2rem 1rem;
+    padding-right: 0px;
+}
+
+.s_viewLesson .bottom .right .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.s_viewLesson .bottom .right .container ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.s_viewLesson .bottom .right .container ul.tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 1rem 0;
+    text-align: center;
+    width: 143px;
+    height: 100px;
+    cursor: pointer;
+    background: #f1f1f2;
+    border: 1px solid #bbbdc0;
+}
+
+.s_viewLesson .bottom .right .container ul.tabs li.current {
+    background: #80ba4c;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.s_viewLesson .bottom .right .container ul.tabs li.current:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6.6rem;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    border-top: 8px solid #80ba4c;
+    border-bottom: 0 solid rgba(255, 255, 255, .5);
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    transition: border-bottom .1s, border-top .1s .1s;
+}
+
+.s_viewLesson .bottom .right .container ul.tabs li.current span {
+    color: #fff;
+}
+
+
+.s_viewLesson .bottom .right .container ul.tabs li span.current,
+.s_viewLesson .bottom .right .container ul.tabs li.current span.active {
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: cover;
+    background-size: contain;
+    display: block;
+    margin: auto;
+    margin-bottom: 0.2rem;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    background-position: center;
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-1"] span.current{
+    background-image: url(../images/tab1.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-2"] span.current{
+    background-image: url(../images/tab2.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-3"] span.current{
+    background-image: url(../images/tab3.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-4"] span.current{
+    background-image: url(../images/tab4.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-5"] span.current{
+    background-image: url(../images/tab2.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-6"] span.current{
+    background-image: url(../images/tab5.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-1"] span.active{
+    background-image: url(../images/w_tab1.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li[data-tab="tab-2"] span.active{
+    background-image: url(../images/w_tab2.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li.current[data-tab="tab-3"] span.active{
+    background-image: url(../images/w_tab3.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li.current[data-tab="tab-4"] span.active{
+    background-image: url(../images/w_tab4.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li.current[data-tab="tab-5"] span.active{
+    background-image: url(../images/w_tab2.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li.current[data-tab="tab-6"] span.active{
+    background-image: url(../images/w_tab5.png);
+}
+.s_viewLesson .bottom .right .container ul.tabs li span {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    color: rgba(27, 97, 127, 255);
+    text-align: center;
+}
+
+.s_viewLesson .bottom .right .container .tab-content {
+    display: none;
+    background: #fff;
+    padding: 15px 0;
+    width: 97.5%;
+    position: relative;
+}
+
+.s_viewLesson .bottom .right .container .tab-content .img {
+    width: 100%;
+    height: 250px;
+}
+
+.s_viewLesson .bottom .right .container .tab-content .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.s_viewLesson .bottom .right .container .tab-content.current {
+    display: inherit;
+}
+
+.s_viewLesson .controls {
+    direction: ltr;
+    text-align: left;
+    width: 92%;
+    border: 1px solid #cacaca;
+    margin: 2rem 0;
+    padding: 0.2rem 0.5rem;
+    margin-top: 1rem;
+    background: #f7f8f8;
+}
+
+.s_viewLesson .controls .action,
+.s_viewLesson .controls .left_time,
+.s_viewLesson .controls .progress-bar-wrap,
+.s_viewLesson .controls .full_time,
+.s_viewLesson .controls .voice {
+    display: inline-block;
+}
+
+.s_viewLesson .controls .p {
+    visibility: hidden;
+}
+
+.s_viewLesson .controls .progress-bar-wrap {
+    margin: 0 0.5rem;
+    position: relative;
+    width: 430px;
+    height: 10px;
+    background: #7d7f82;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.s_viewLesson .controls .progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    background: #7dc165;
+    border-radius: 5px;
+    transform: translateX(-100%);
+}
+
+.s_viewLesson .controls .action i.fa,
+.s_viewLesson .controls .voice i.fa {
+    padding: 0 0.2rem;
+    color: #7d7f82;
+}
+
+.s_viewLesson .controls .left_time,
+.s_viewLesson .controls .full_time {
+    padding: 0 0.5rem;
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+    font-family: Arial-BoldMT, WinSoftPro-Medium, AdobeInvisFont;
+}
+
+.s_viewLesson .controls .voice {
+    padding: 0 0.5rem;
+    color: #7d7f82;
+}
+
+.s_viewLesson .controls .voice .progress-bar-wrap {
+    width: 70px;
+}
+.s_viewLesson .article {
+    border: 1px solid #cacaca;
+    padding: 1rem 1.5rem;
+    width: 92%;
+}
+.s_viewLesson  .article .action {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-align: left;
+    float: left;
+}
+.s_viewLesson .article .action button {
+    background: rgba(46, 101, 136, 255);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    margin-right: 0.5rem;
+    padding: 4px;
+}
+.s_viewLesson  .article p {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    word-spacing: 2px;
+    line-height: 2.2rem;
+    color: rgba(0, 0, 0, 255);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.s_viewLesson .bottom .right #nxt_tab {
+    position: absolute;
+    bottom: 0;
+    top: 80rem;
+    margin: auto;
+    right: 40rem;
+    left: 0rem;
+    background: #7fbb50;
+    width: 85px;
+    height: 85px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.s_viewLesson .bottom .right #nxt_tab i {
+    color: #fff;
+    margin: 1rem auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 3rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.s_viewLesson .bottom .right .links {
+    border: 1px solid #cacaca;
+    width: 90%;
+    margin-top: 0rem;
+    display: inline-block;
+    padding: 1.5rem;
+    position: relative;
+}
+.s_viewLesson .bottom .right .links .link a {
+    display: block;
+    color: #000;
+    padding-bottom: 0.2rem;
+}
+.s_viewLesson .bottom .right .links .link a:hover {
+    text-decoration: underline;
+    color: #7fbb50;
+}
+.s_viewLesson .bottom .right .links .img,
+.s_viewLesson .bottom .right .links .link {
+    display: inline-block;
+}
+
+.s_viewLesson .bottom .right .links .img {
+    background: #ea6552;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.s_viewLesson .bottom .right .links .img img {
+    display: block;
+    margin: auto;
+}
+
+.s_viewLesson .bottom .right .links .img span {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 12pt;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+}
+
+.s_viewLesson .bottom .right .links .link {
+    float: left;
+    padding: 0 1rem;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    color: rgba(128, 128, 128, 255);
+    text-align: start;
+    margin: auto;
+    width: 100%;
+    padding-right: 3rem;
+}
+
+.s_viewLesson .bottom .right .links .link div {
+    margin-bottom: 1rem;
+}
+
+.s_viewLesson .bottom .right .links .link hr {
+    border: none;
+    border-bottom: 2px dotted rgba(128, 128, 128, 255);
+    height: 0;
+    width: 20rem;
+    display: inline-block;
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.s_viewLesson .bottom .left {
+    background: #f1f1f1;
+    max-height: fit-content;
+    padding: 1rem;
+}
+
+.s_viewLesson .bottom .left .vocabulary_title h2 {
+    background: #20a1bc;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 15pt;
+    color: rgba(255, 255, 255, 255);
+    text-align: start;
+    display: block;
+    padding: 0.5rem 2rem;
+}
+
+.s_viewLesson .bottom .left .vocabulary_title h3 {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 13pt;
+    color: rgba(20, 36, 43, 255);
+    text-align: start;
+    background: #fff;
+    display: block;
+    padding: 1.2rem 1rem;
+    margin-top: 0.5rem;
+
+}
+.s_viewLesson .bottom .left .vocabulary {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    background: #fff;
+    font-size: 12pt;
+    color: rgba(20, 36, 43, 255);
+}
+.s_viewLesson .bottom .left .vocabulary table,
+.s_viewLesson .bottom .left .vocabulary tbody {
+    width: 100%;
+    display: block;
+}
+.s_viewLesson .bottom .left .vocabulary tr {
+    border: 1px solid #f1f1f1;
+    border-left: 0;
+    border-right: 0;
+    width: 100%;
+    display: block;
+    padding: 1rem 0rem;
+}
+.s_viewLesson .bottom .left .vocabulary td {
+    display: inline-block;
+    font-size: 13pt;
+}
+.s_viewLesson .bottom .left .vocabulary td.mean {
+    display: inline-block;
+    float: left;
+    color: #4e4e4e;
+}
+.s_viewLesson .bottom .left .vocabulary tr:nth-child(odd) {
+    background: #fbfbfb;
+}
+#content_tab_1,
+#content_tab_2,
+#content_tab_3,
+#content_tab_4{
+    margin: 1rem  0;
+    padding: 1rem 0.5rem;
+    position: relative;
+}
+.quest_h,
+.quest_title,
+.quest div.col-md-6 span{
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    color: #000;
+    text-align: right;
+}
+.quest_h {
+    color: #212529;
+    font-size: 12pt;
+    font-family: Cairo-Regular, WinSoftPro-Medium, AdobeInvisFont;
+    margin-bottom: 2rem;
+}
+.quest div.col-md-6 {
+    margin: 2rem 0;
+    padding: 0;
+}
+.quest div.col-md-6 span {
+    font-size: 16pt;
+    color: #999;
+}
+.quest #myBar {
+    background-color: rgba(27, 97, 127, 255);
+    border: 1px solid rgba(27, 97, 127, 255);
+}
+.quest #myBar.no {
+    background-color: #ea6552;
+    border: 1px solid #ea6552;
+}
+.quest #myBar .in {
+    font-family: HarabaraMaisBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    color: #fff;
+}
+.quest #myProgress {
+    background-color: #e9ecef;
+    border: 0px solid #e9ecef;
+    margin: 0.5rem 0;
+}
+.next-tab{
+    color: rgba(255, 255, 255, 255);
+    background: #7fbb50;
+    border: 1px solid #7fbb50;
+    font-size: 17pt;
+    border-radius: 0;
+    width: 83px;
+    height: 60px;
+    padding-top: 0;
+}
+.next-tab i{
+    margin: auto;
+    display: block;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    padding-top: 1.2rem;
+}
+.next-tab:hover {
+    color: rgba(255, 255, 255, 255);
+    background: #7fbb50;
+}
+#content_tab_1 [type="radio"]:checked,
+#content_tab_1 [type="radio"]:not(:checked),
+#content_tab_3 [type="radio"]:checked,
+#content_tab_3 [type="radio"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+}
+#content_tab_1 [type="radio"]:checked + label,
+#content_tab_1 [type="radio"]:not(:checked) + label,
+#content_tab_3 [type="radio"]:checked + label,
+#content_tab_3 [type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-right: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #1b617f;
+    margin: 1rem 0;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+}
+#content_tab_1 [type="radio"]:checked + label:before,
+#content_tab_1 [type="radio"]:not(:checked) + label:before,
+#content_tab_3 [type="radio"]:checked + label:before,
+#content_tab_3 [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #80ba4c;
+    border-radius: 0;
+    background: #fff;
+}
+#content_tab_1 [type="radio"]:checked + label:after,
+#content_tab_1 [type="radio"]:not(:checked) + label:after,
+#content_tab_3 [type="radio"]:checked + label:after,
+#content_tab_3 [type="radio"]:not(:checked) + label:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #80ba4c;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+#content_tab_1 [type="radio"]:not(:checked) + label:after,
+#content_tab_3 [type="radio"]:not(:checked) + label:after{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+#content_tab_1 [type="radio"]:checked + label:after,
+#content_tab_3 [type="radio"]:checked + label:after{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+#content_tab_1 p{
+    color: #1b617f;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+    margin-bottom: 0.5rem;
+}
+#content_tab_1 textarea {
+    width: 45%;
+    height: 110px;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 14pt;
+}
+#content_tab_1 button.submit {
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    color: rgba(255, 255, 255, 255);
+    background: #7fbb50;
+    border: 1px solid #7fbb50;
+    padding: 0.2rem 4rem;
+    margin-left: 1rem;
+    font-size: 13pt;
+    border-radius: 0;
+}
+
+#content_tab_2 div.img {
+    width: 92%;
+    height: 290px;
+}
+#content_tab_2 div.img img {
+    width: 100%;
+    height: 100%;
+}
+#content_tab_2 .audio audio {
+    width: 92%;
+}
+
+#content_tab_2 .audio {
+    margin: 1rem 0;
+}
+.article ul.tabs li.current:after {
+    top: 3.5rem !important;
+}
+.article ul.tabs li{
+    width: 50px !important;
+    height: 50px !important;
+}
+
+#content_tab_3 .selections div {
+    display: block;
+}
+
+#content_tab_3  h2.alert {
+    color: #fff;
+    background-color: rgba(27, 97, 127, 255);
+    border-color: rgba(27, 97, 127, 255);
+    width: 50%;
+    border-radius: 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+#content_tab_3  h3.alert {
+    color: #fff;
+    background-color: rgb(253, 131, 105);
+    border-color: rgb(253, 131, 105);
+    width: 50%;
+    border-radius: 0;
+    text-align: center;
+}
+#content_tab_4 .row {
+    width: 92%;
+}
+#content_tab_4 .row .col-md-6 h3 {
+    margin-top: 1rem;
+    color: #212529;
+    font-size: 12pt;
+    font-family: Cairo-Regular, WinSoftPro-Medium, AdobeInvisFont;
+}
+.quest div span {
+    font-size: 16pt;
+    color: #999;
+}
+#content_tab_4  .quest div.first {
+    margin-top: 1rem;
+}
+#content_tab_3  .table {
+    width: 92%;
+    margin: 1rem 0;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+}
+#content_tab_3  .table .fa-times-circle {
+    color: rgb(253, 131, 105);
+}
+#content_tab_3  .table  .fa-check-circle {
+    color: rgba(27, 97, 127, 255);
+}
+#content_tab_3  .table thead tr:first-child td {
+    color: rgba(27, 97, 127, 255);
+}
+.move_nxt {
+    display: block;
+    width: 82%;
+    margin: auto;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 6rem;
+}
+.retest {
+    position: absolute;
+    bottom: 0;
+    left: 13rem;
+    text-align: left;
+}
+.retest a{
+    color: rgba(255, 255, 255, 255);
+    background: #7fbb50;
+    border: 1px solid #7fbb50;
+    font-size: 17pt;
+    border-radius: 0;
+    width: 150px;
+    height: 60px;
+    padding: 0.8rem 0.4rem;
+}
+.retest a:hover {
+    color: rgba(255, 255, 255, 255);
+    background: #7fbb50;
+    border: 1px solid #7fbb50;
+
+
+}
+/*---------------------------------------------------- */
+
+
+/*# Footer */
+
+
+/*---------------------------------------------------- */
+
+
+/*# Footer */
+
+div.footer {
+    background-repeat: no-repeat;
+    background-image: url(../images/footer.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    height: 120px;
+    direction: rtl;
+    width: 100%;
+}
+
+div.footer .row {
+    margin: auto;
+    width: 85%;
+    padding: 2rem 0;
+}
+
+div.footer .row div:first-child {
+    margin: auto;
+}
+
+div.footer h5 {
+    font-family: CenturyGothic, Cairo-Regular, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 12pt;
+    color: rgba(255, 255, 255, 255);
+    text-align: justify;
+}
+
+div.footer .social {
+    text-align: center;
+}
+
+div.footer .social a {
+    text-align: center;
+    margin: 0 0.5rem;
+    border: 1px solid #fff;
+    display: inline-block;
+}
+
+div.footer .social a i {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0.5rem 0.8rem;
+}
+
+div.footer .social a i.fa-facebook {
+    margin: 0.5rem 1rem;
+}
+
+#return-to-top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    background: #7fbb50;
+    width: 85px;
+    height: 85px;
+    display: block !important;
+    text-decoration: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5rem;
+    margin-left: 8rem;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 1rem auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 3rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: #7fbb50;
+}
+
+#return-to-top:hover i {
+    color: #fff;
+}
+
+
+.split_right {
+    border-top: 2px solid #d3d3d3;
+    width: 2rem;
+    position: absolute;
+    right: 0rem;
+}
+.split_left {
+    border-top: 2px solid #d3d3d3;
+    width: 17rem;
+    position: absolute;
+    margin-right: 9.7rem;
+}
+
+
+/**
+ * Tooltip Styles
+ */
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 105%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 10px 5px;
+    width: 150px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 20px;
+    background-color: #000;
+    background-color: #000;
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 105%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid #000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+

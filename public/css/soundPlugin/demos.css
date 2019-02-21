@@ -1,0 +1,7 @@
+ 
+input, button, select {
+   /* font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;*/
+    font-weight: 300;
+    font-size: 14px;
+    padding: 2px;
+}

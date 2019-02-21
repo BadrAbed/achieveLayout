@@ -1,0 +1,447 @@
+@font-face {
+    font-family: "Cairo-Bold";
+    src: url("../fonts/Cairo-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url("../fonts/Cairo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url("../fonts/Cairo-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "ArialMT";
+    src: url("../fonts/ArialMT.ttf");
+}
+
+@font-face {
+    font-family: "Arial-BoldMT";
+    src: url("../fonts/Arial-BoldMT.ttf");
+}
+
+@font-face {
+    font-family: "HarabaraMaisBold";
+    src: url("../fonts/HarabaraMaisBold.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeue Bold";
+    src: url("../fonts/BebasNeue Bold.otf");
+}
+
+@font-face {
+    font-family: "CenturyGothic";
+    src: url("../fonts/CenturyGothic.otf");
+}
+
+@font-face {
+    font-family: "Muli-SemiBold";
+    src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: right;
+    font-size: 14px;
+    margin: 0;
+    color: #999;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    direction: rtl;
+}
+
+.wrapper .login_inner {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.image-1 {
+    position: absolute;
+    bottom: -12px;
+    right: -191px;
+    z-index: 99;
+}
+
+.img2 {
+    width: 400px;
+    height: 340px;
+    position: absolute;
+    z-index: 99;
+    top: 8rem;
+    left: 30px;
+}
+
+
+/* Form */
+
+.login_form {
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 9px 15px 9px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.login_form .left,
+.login_form .right {
+    display: inline-block;
+}
+
+.login_form form {
+    margin: auto;
+    padding-right: 3rem;
+    padding-left: 0;
+}
+
+.login_form h1 {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 1.4rem;
+    background: linear-gradient(to left, #79cb88 10%, #2980b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgba(121, 203, 136, 255);
+    text-align: center;
+    display: block;
+    margin: 1.2rem 0;
+}
+
+.login_form input {
+    background: none;
+    color: #000;
+    font-size: 12pt;
+    padding: 2rem;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(103, 103, 103, 255);
+    font-family: sans-serif;
+    line-height: 1.15;
+    margin: 0;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+}
+
+.login_form input:focus {
+    outline: none;
+    border-bottom: 1px solid #79cb88;
+}
+
+.login_form input:focus~label,
+.login_form input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #79cb88;
+}
+
+.login_form input:focus~.login_form .bar:before {
+    width: 320px;
+}
+
+.login_form label {
+    position: absolute;
+    pointer-events: none;
+    right: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 12px;
+    color: rgba(103, 103, 103, 255);
+    text-align: justify;
+}
+
+.login_form .bar {
+    position: relative;
+    display: block;
+    width: 320px;
+}
+
+.login_form .bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: red;
+    transition: 300ms ease all;
+    left: 0%;
+}
+
+.login_form .checkbox {
+    display: block;
+    text-align: left;
+    margin: 1rem;
+    direction: ltr;
+}
+
+.login_form input.check_box {
+    width: 100px;
+    display: inline-block;
+}
+
+.login_form .form-check-label {
+    position: relative;
+    top: -0.1rem;
+    padding: 0;
+    display: inline-block;
+    font-size: 12pt !important;
+    color: rgba(103, 103, 103, 255) !important;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+}
+
+
+/*  */
+
+.check_box {
+    opacity: 0;
+    position: absolute;
+}
+
+.check_box,
+.form-check-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.check_box+.form-check-label:before {
+    content: '';
+    background: #77c98e;
+    border-radius: 0px;
+    border: 2px solid #77c98e;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    text-align: center;
+}
+
+.check_box:checked+.form-check-label:before {
+    width: 20px;
+    height: 20px;
+}
+
+.check_box:checked+.form-check-label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 13px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+}
+
+
+/*  */
+
+.login_form .login_btn {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    font-size: 11pt;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+    background: linear-gradient(to left, #79cb88 10%, #2980b9 100%);
+    border: 1px solid transparent;
+    padding: 0.3rem 3rem;
+    border-radius: 25px;
+    margin: auto;
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.login_form .reg {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.login_form .reg .btn {
+    font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    color: rgba(103, 103, 103, 255);
+    border: 1px solid rgba(103, 103, 103, 255);
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 12px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+.login_form .btn:focus,
+.login_form .login_btn:focus {
+    outline: none;
+}
+
+.form-holder {
+    position: relative;
+    margin: 2rem 0.5rem;
+}
+
+.login_form .forget {
+    background: linear-gradient(to left, #79cb88 10%, #2980b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgba(121, 203, 136, 255);
+    display: block;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+
+/*  */
+
+.login_form .left {
+    background-repeat: no-repeat;
+    background-image: url(../images/img7.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: contain;
+    width: 422px;
+    height: 600px;
+}
+
+
+/*  */
+
+.form-holder span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #333;
+}
+
+.form-holder span.lnr-lock {
+    left: 2px;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    display: block;
+    width: 100%;
+    height: 38px;
+    background: none;
+    padding: 3px 42px 0px;
+    color: #666;
+    font-family: "Muli-SemiBold";
+    font-size: 16px;
+}
+
+.form-control::-webkit-input-placeholder {
+    font-size: 14px;
+    font-family: "Muli-Regular";
+    color: #999;
+    transform: translateY(1px);
+}
+
+.form-control::-moz-placeholder {
+    font-size: 14px;
+    font-family: "Muli-Regular";
+    color: #999;
+    transform: translateY(1px);
+}
+
+.form-control:-ms-input-placeholder {
+    font-size: 14px;
+    font-family: "Muli-Regular";
+    color: #999;
+    transform: translateY(1px);
+}
+
+.form-control:-moz-placeholder {
+    font-size: 14px;
+    font-family: "Muli-Regular";
+    color: #999;
+    transform: translateY(1px);
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #accffe;
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .inner {
+        width: 400px;
+        left: 4%;
+    }
+}
+
+@media (max-width: 767px) {
+    .inner {
+        width: 100%;
+        left: 0;
+    }
+    .image-1,
+    .image-2 {
+        display: none;
+    }
+    form {
+        padding: 35px;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+    }
+    .wrapper {
+        background: none;
+    }
+}
+
+
+/*# sourceMappingURL=style.css.map */

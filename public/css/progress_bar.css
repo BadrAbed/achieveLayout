@@ -1,0 +1,70 @@
+
+
+/* Form Progress */
+.progress2 {
+    width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+}
+.progress2 .circle2,
+.progress2 .bar2 {
+    display: inline-block;
+    background: #fff;
+    width: 51PX;
+    height: 51PX;
+    border-radius: 61px;
+    border: 1px solid #d5d5da;
+}
+.progress2 .bar2 {
+    position: relative;
+    width: 71px;
+    height: 4px;
+    top: -38px;
+    margin-left: -5px;
+    margin-right: -4px;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+.progress2 .circle2 .label {
+    display: inline-block;
+    width: 50PX;
+    height: 50PX;
+    line-height: 42px;
+    border-radius: 32px;
+    margin-top: 0px;
+    margin-left: 2px;
+    color: #b5b5ba;
+    font-size: 19px;
+}
+.progress2 .circle2 .title {
+    color: #b5b5ba;
+    font-size: 13px;
+    line-height: 30px;
+    margin-left: -5px;
+}
+
+/* Done / Active */
+.progress2 .bar2.done,
+.progress2 .circle2.done {
+    background: #eee;
+}
+.progress2 .bar2.active {
+    background: linear-gradient(to right, #EEE 40%, #FFF 60%);
+}
+.progress2 .circle2.done .label {
+    color: #FFF;
+    background: #8bc435;
+    box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progress2 .circle2.done .title {
+    color: #444;
+}
+.progress2 .circle2.active .label {
+    color: #FFF;
+    background: #05932a;
+    box-shadow: inset 0 0 2px rgba(0,0,0,.2);
+}
+.progress2 .circle2.active .title {
+    color: #464e50;
+}
