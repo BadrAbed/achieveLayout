@@ -20,6 +20,7 @@
     <!-- styl css -->
     <link rel="stylesheet" href="{{asset('Studentpublic/css/Mstyle.css')}}">
     <link rel="stylesheet" href="{{asset('Studentpublic/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('Studentpublic/css/responsive.css')}}">
     <!-- rtl layouts -->
     <link rel="stylesheet" href="{{asset('Studentpublic/css/layouts/rtl.css')}}">
     <!-- Fonts  -->
