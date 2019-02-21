@@ -19,6 +19,30 @@
     }
     /* #Login Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* studentDashboard Page */
+    .StudentDashboard .lessons .square span {
+        width: auto;
+        height: 270px;
+        min-width: -webkit-fill-available;
+    }
+    .StudentDashboard .lessons .square img {
+        height: 292px;
+        max-height: 292px;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        width: 90%;
+    }
+    .StudentDashboard .lessons .left {
+        padding-right: 0rem;
+        margin-top: 1rem;
+    }
+    a.lesson {
+        margin: 0 0rem;
+        float: none;
+    }
+    /* #studentDashboard Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -54,8 +78,29 @@ Small devices (landscape phones, 576px and up)
     }
     /* #Login Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* studentDashboard Page */
+    .StudentDashboard .lessons .square span {
+        width: auto;
+        height: 270px;
+        min-width: -webkit-fill-available;
+    }
+    .StudentDashboard .lessons .square img {
+        height: 292px;
+        max-height: 292px;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        width: 90%;
+    }
+    .StudentDashboard .lessons .left {
+        padding-right: 0rem;
+        margin-top: 1rem;
+    }
+    a.lesson {
+        margin: 0 0rem;
+        float: none;
+    }
+    /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -83,42 +128,67 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
         width: 340px;
         height: 280px;
     }
-    .reg .img2{
-        top: 12rem;
-        left: 155px;
-    }
+    
     .login_form .left {
         display: block;
     }
     .login_form form {
         padding-right: 1rem;
     }
-    .reg .login_form form {
-        padding-right: 1rem;
-        padding-left: 2rem;
-    }
+    
     .login_form .left {
         height: 500px;
     }
+    .login_form .login_btn {
+        margin-top: 0;
+    }
+    
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Register Page */
     .reg .login_form .left {
         height: auto;
         display: none;
     }
-    .login_form .login_btn {
-        margin-top: 0;
+    .reg .login_form form {
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
+    .reg .img2{
+        top: 12rem;
+        left: 155px;
     }
     .login_form .reg .btn {
         margin-left: 0.1rem;
         margin-top: 0rem;
         margin-bottom: 0rem;
     }
-    /* #Login Page */
+    /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* studentDashboard Page */
+    .StudentDashboard .lessons .square span {
+        width: auto;
+        height: 270px;
+        min-width: -webkit-fill-available;
+    }
+    .StudentDashboard .lessons .square img {
+        height: 292px;
+        max-height: 292px;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        width: 90%;
+    }
+    .StudentDashboard .lessons .left {
+        padding-right: 1rem;
+    }
+    a.lesson {
+        float: left;
+        padding: 1rem;
+        margin: 0 1rem;
+        margin-left: 0;
+    }
+    /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -142,16 +212,39 @@ Large devices (desktops, 992px and up)
     .login_form .left {
         display: block;
     }
+    
+    /* #Login Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Register Page */
     .reg .login_form .left {
         display: block;
     }
-    /* #Login Page */
+    /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* studentDashboard Page */
+    .StudentDashboard .lessons .square span {
+        width: auto;
+        height: 270px;
+        min-width: -webkit-fill-available;
+    }
+    .StudentDashboard .lessons .square img {
+        height: 292px;
+        max-height: 292px;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        width: 90%;
+    }
+    .StudentDashboard .lessons .left {
+        padding-right: 2rem;
+    }
+    a.lesson {
+        float: left;
+        padding: 1rem;
+        margin: 0 1rem;
+        margin-left: 0;
+    }
+    /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -169,9 +262,7 @@ Extra large devices (large desktops, 1200px and up)
 */
 @media (max-width: 1500px) and (min-width: 1200px){  
     /* Login Page */
-    .login_inner.reg {
-        width: 75% !important;
-    }
+    
     .login_inner {
         width: 63% !important;
     }
@@ -183,11 +274,33 @@ Extra large devices (large desktops, 1200px and up)
     }
     /* #Login Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* Register Page */
+    .login_inner.reg {
+        width: 75% !important;
+    }
+    /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* studentDashboard Page */
+    .StudentDashboard .lessons .square span {
+        width: auto;
+        height: 270px;
+        min-width: -webkit-fill-available;
+    }
+    .StudentDashboard .lessons .square img {
+        height: 292px;
+        max-height: 292px;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        width: 85%;
+    }
+    a.lesson {
+        float: left;
+        padding: 1rem;
+        margin: 0 1rem;
+        margin-left: 0;
+    }
+    /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -210,10 +323,35 @@ Custom media queries
     .login_inner {
         width: 50% !important;
     }
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Register Page */
     .login_inner.reg {
         width: 60% !important;
     }
     .reg .login_form .left {
         display: block;
     }
+    /* #Register Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* studentDashboard Page */
+    .StudentDashboard .lessons .square span {
+        width: auto;
+        height: 270px;
+        min-width: -webkit-fill-available;
+    }
+    .StudentDashboard .lessons .square img {
+        height: 292px;
+        max-height: 292px;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        width: 70%;
+    }
+    a.lesson {
+        float: left;
+        padding: 1rem;
+        margin: 0 1rem;
+        margin-left: 0;
+    }
+    /* #studentDashboard Page */
 }

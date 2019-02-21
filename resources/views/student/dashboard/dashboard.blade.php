@@ -22,13 +22,13 @@
         {{-- ////////////////////// Lessons ////////////////////////////// --}}
         <div class="lessons">
             <div class="row">
-                <div class="col-md-3 right">
+                <div class="col-lg-3 col-md-4 col-sm-12 right">
                     <div class="square">
                         <img src="{{asset($current_lesson_detail->cover_image)}}" class="" alt="">
                         <span></span>
                     </div>
                 </div>
-                <div class="col-md-9 left">
+                <div class="col-lg-9 col-md-8 col-sm-12 left">
                     <h2>{{$current_lesson_detail->content_name}}</h2>
                     <p>{{$current_lesson_detail->abstract}}</p>
 
