@@ -951,7 +951,7 @@ Custom media queries
     /* studentLessons Page */
     .table_lessons .header {
         padding-right: 0rem;
-        padding-top: 5rem;
+        padding-top: 3rem;
     }
     .table_lessons table {
         display: table;
@@ -968,7 +968,7 @@ Custom media queries
         max-width: 550px;
     }
     .table_lessons .row {
-        width: 75%;
+        width: 70%;
     }
     .table_lessons table .details .name {
         float: left;
