@@ -664,4 +664,51 @@ Custom media queries
         margin: auto;
     }
     /* #studentDashboard Page */
+    div.footer {
+        height: 120px;
+    }
+    #return-to-top {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        background: #7fbb50;
+        width: 85px;
+        height: 85px;
+        display: block !important;
+        text-decoration: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        display: none;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 5rem;
+        margin-left: 8rem;
+    }
+    #return-to-top i {
+        color: #fff;
+        margin: 1rem auto;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        font-size: 3rem;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    div.footer .row {
+        margin: auto;
+        width: 85%;
+        padding: 2rem 0;
+    }
 }

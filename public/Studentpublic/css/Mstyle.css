@@ -888,8 +888,10 @@ div.bg {
 }
 
 .table_lessons table .details .img {
-    padding-right: 0;
+    margin: auto;
     text-align: center;
+    width: 250px;
+    height: 200px;
 }
 
 .table_lessons table .details .name {
@@ -898,8 +900,8 @@ div.bg {
 }
 
 .table_lessons table .details img {
-    width: 180px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
 }
 
 .table_lessons table .details p {
@@ -1689,6 +1691,8 @@ div.footer {
     height: 120px;
     direction: rtl;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 div.footer .row {
@@ -1780,16 +1784,16 @@ div.footer .social a i.fa-facebook {
 
 
 .split_right {
-    border-top: 1px solid #d3d3d3;
+    border-top: 2px solid #d3d3d3;
     width: 2rem;
     position: absolute;
     right: 0rem;
 }
 .split_left {
-    border-top: 1px solid #d3d3d3;
-    width: -webkit-fill-available;
+    border-top: 2px solid #d3d3d3;
+    width: 17rem;
     position: absolute;
-    left: 0;
+    margin-right: 9.7rem;
 }
 
 
