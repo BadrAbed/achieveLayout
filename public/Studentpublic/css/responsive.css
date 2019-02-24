@@ -87,8 +87,73 @@
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /* studentLessons Page */
+    .table_lessons .header {
+        padding-right: 0rem;
+        padding-top: 3rem;
+    }
+    .table_lessons table .details .img {
+        display: none;
+    }
+    .table_lessons table .details p {
+        display: none;
+    }
+    .table_lessons .row {
+        width: 90%;
+    }
+    .table_lessons table .details .name {
+        float: none;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+    .table_lessons table .details .name h5 {
+        font-size: 11pt;
+        text-align: center;
+        margin-top: 0.3rem;
+        color: rgba(0, 0, 0, 255);
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      
+      table tr {
+        display: block;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+      }
+      
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+      }
+      
+      table td::before {
+        content: attr(data-label);
+        float: right;
+        font-size: 13pt;
+        color: rgba(27, 97, 127, 255);
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+      }
+      .table_lessons table .details.progress2 td::before{
+        color: #fff;
+        background: #7cc573;
+      }
+      
+      table td:last-child {
+        border-bottom: 0;
+      }
+    /* #studentLessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -210,6 +275,74 @@ Small devices (landscape phones, 576px and up)
         width: 80%;
     }
     /* #studentDashboard Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* studentLessons Page */
+    .table_lessons .header {
+        padding-right: 0rem;
+        padding-top: 3rem;
+    }
+    .table_lessons table .details .img {
+        display: none;
+    }
+    .table_lessons table .details p {
+        display: none;
+    }
+    .table_lessons .row {
+        width: 90%;
+    }
+    .table_lessons table .details .name {
+        float: none;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+    .table_lessons table .details .name h5 {
+        font-size: 11pt;
+        text-align: center;
+        margin-top: 0.3rem;
+        color: rgba(0, 0, 0, 255);
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+        
+    table tr {
+        display: block;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+    }
+        
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+        
+    table td::before {
+        content: attr(data-label);
+        float: right;
+        font-size: 13pt;
+        color: rgba(27, 97, 127, 255);
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+    .table_lessons table .details.progress2 td::before{
+        color: #fff;
+        background: #7cc573;
+    }
+    
+    table td:last-child {
+        border-bottom: 0;
+    }
+    /* #studentLessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -496,6 +629,81 @@ Large devices (desktops, 992px and up)
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* studentLessons Page */
+    .table_lessons .header {
+        padding-right: 0rem;
+        padding-top: 3rem;
+    }
+    .table_lessons table {
+        display: table;
+    }
+    .table_lessons table thead,
+    .table_lessons table tbody {
+        display: table-row-group;
+    }
+    .table_lessons table .details .img {
+        display: inline-block;
+    }
+    .table_lessons table .details p {
+        display: block;
+        max-width: 350px;
+    }
+    .table_lessons .row {
+        width: 90%;
+    }
+    .table_lessons table .details .name {
+        float: left;
+        margin: auto;
+        display: inline-block;
+        text-align: right;
+        max-width: 60%;
+    }
+    .table_lessons table .details .name h5 {
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+        font-size: 17pt;
+        color: rgba(27, 97, 127, 255);
+        padding: 0 1rem;
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: auto;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: unset;
+        width: auto;
+    }
+        
+    table tr {
+        display: table-row;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border: none;
+    }
+        
+    table td {
+        border-bottom: 1px solid #e2e2e2;
+        display: table-cell;
+        text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+        
+    table td::before {
+        display: none;
+    }
+    .table_lessons table .details.progress2 td::before{
+        color: #fff;
+        background: #7cc573;
+    }
+        
+    table td:last-child {
+        border-bottom: 0;
+    }
+    /* #studentLessons Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -586,6 +794,81 @@ Extra large devices (large desktops, 1200px and up)
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* studentLessons Page */
+    .table_lessons .header {
+        padding-right: 0rem;
+        padding-top: 3rem;
+    }
+    .table_lessons table {
+        display: table;
+    }
+    .table_lessons table thead,
+    .table_lessons table tbody {
+        display: table-row-group;
+    }
+    .table_lessons table .details .img {
+        display: inline-block;
+    }
+    .table_lessons table .details p {
+        display: block;
+        max-width: 450px;
+    }
+    .table_lessons .row {
+        width: 90%;
+    }
+    .table_lessons table .details .name {
+        float: left;
+        margin: auto;
+        display: inline-block;
+        text-align: right;
+        max-width: 67%;
+    }
+    .table_lessons table .details .name h5 {
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+        font-size: 17pt;
+        color: rgba(27, 97, 127, 255);
+        padding: 0 1rem;
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: auto;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: unset;
+        width: auto;
+    }
+        
+    table tr {
+        display: table-row;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border: none;
+    }
+        
+    table td {
+        border-bottom: 1px solid #e2e2e2;
+        display: table-cell;
+        text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+        
+    table td::before {
+        display: none;
+    }
+    .table_lessons table .details.progress2 td::before{
+        color: #fff;
+        background: #7cc573;
+    }
+        
+    table td:last-child {
+        border-bottom: 0;
+    }
+    /* #studentLessons Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -664,6 +947,81 @@ Custom media queries
         width: 68%;
     }
     /* #studentDashboard Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* studentLessons Page */
+    .table_lessons .header {
+        padding-right: 0rem;
+        padding-top: 5rem;
+    }
+    .table_lessons table {
+        display: table;
+    }
+    .table_lessons table thead,
+    .table_lessons table tbody {
+        display: table-row-group;
+    }
+    .table_lessons table .details .img {
+        display: inline-block;
+    }
+    .table_lessons table .details p {
+        display: block;
+        max-width: 550px;
+    }
+    .table_lessons .row {
+        width: 75%;
+    }
+    .table_lessons table .details .name {
+        float: left;
+        margin: auto;
+        display: inline-block;
+        text-align: right;
+        max-width: 75%;
+    }
+    .table_lessons table .details .name h5 {
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+        font-size: 17pt;
+        color: rgba(27, 97, 127, 255);
+        padding: 0 1rem;
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: auto;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: unset;
+        width: auto;
+    }
+        
+    table tr {
+        display: table-row;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border: none;
+    }
+        
+    table td {
+        border-bottom: 1px solid #e2e2e2;
+        display: table-cell;
+        text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+        
+    table td::before {
+        display: none;
+    }
+    .table_lessons table .details.progress2 td::before{
+        color: #fff;
+        background: #7cc573;
+    }
+        
+    table td:last-child {
+        border-bottom: 0;
+    }
+    /* #studentLessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* Footer Page */
     div.footer {
