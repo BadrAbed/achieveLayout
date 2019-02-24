@@ -359,23 +359,25 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
     div.footer .row {
         padding: 1rem 0;
     }
-    div.footer .row div:first-child {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
     div.footer h5{
         text-align: center;
     }
     #return-to-top {
         width: 50px;
         height: 50px;
-        margin-bottom: 6rem;
-        margin-left: 2rem;
+        margin-bottom: 4rem;
+        margin-left: 1rem;
     }
     #return-to-top i {
         margin: 0.5rem auto;
         margin-top: 0.2rem;
         font-size: 2.5rem;
+    }
+    div.footer {
+        height: 90px;
+    }
+    div.footer .row div:first-child {
+        margin: auto;
     }
     /* #Footer Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -472,8 +474,18 @@ Large devices (desktops, 992px and up)
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /*  Page */
-    /* # Page */
+    /*Footer  Page */
+    div.footer {
+        height: 90px;
+    }
+    #return-to-top {
+        margin-bottom: 4rem;
+        margin-left: 2rem;
+    }
+    div.footer .row div:first-child {
+        margin: auto;
+    }
+    /* #Footer Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 }
