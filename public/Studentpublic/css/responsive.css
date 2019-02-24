@@ -303,9 +303,9 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
     }
     .StudentDashboard .lessons .left {
         padding-left: 0;
-        padding-right: 0rem;
         margin-right: 0rem;
         margin: auto;
+        margin-right: 10rem;
         margin-top: 1rem;
         width: 100%;
         text-align: center;
@@ -614,7 +614,9 @@ Custom media queries
     /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-
+    .StudentDashboard .lessons .left {
+        margin-right: 6rem;
+    }
     .StudentDashboard .row {
         width: 70%;
     }
