@@ -20,26 +20,30 @@
     /* #Login Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .StudentDashboard .lessons .square span {
-        width: auto;
-        height: 270px;
-        min-width: -webkit-fill-available;
+    .StudentDashboard .lessons .right {
+        margin: auto;
     }
-    .StudentDashboard .lessons .square img {
-        height: 292px;
-        max-height: 292px;
+    .StudentDashboard .lessons .left {
+        padding-left: 0;
+        padding-right: 0rem;
+        margin-right: 0rem;
+        margin: auto;
+        margin-top: 1rem;
         width: 100%;
+        text-align: center;
+    }
+    a.lesson {
+        float: none;
+        margin: auto;
+        margin-left: 0;
+        width: auto;
+    }
+    .StudentDashboard .lessons .left h2 {
+        text-align: center;
+        margin-right: 0;
     }
     .StudentDashboard .row {
         width: 90%;
-    }
-    .StudentDashboard .lessons .left {
-        padding-right: 0rem;
-        margin-top: 1rem;
-    }
-    a.lesson {
-        margin: 0 0rem;
-        float: none;
     }
     .StudentDashboard .points .right span {
         font-size: 40pt;
@@ -77,6 +81,9 @@
     }
     .StudentDashboard .level .left {
         margin: 1rem auto;
+    }
+    .StudentDashboard .gallery .row .arrows {
+        width: 80%;
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -137,26 +144,30 @@ Small devices (landscape phones, 576px and up)
     /* #Login Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .StudentDashboard .lessons .square span {
-        width: auto;
-        height: 270px;
-        min-width: -webkit-fill-available;
+    .StudentDashboard .lessons .right {
+        margin: auto;
     }
-    .StudentDashboard .lessons .square img {
-        height: 292px;
-        max-height: 292px;
+    .StudentDashboard .lessons .left {
+        padding-left: 0;
+        padding-right: 0rem;
+        margin-right: 0rem;
+        margin: auto;
+        margin-top: 1rem;
         width: 100%;
+        text-align: center;
+    }
+    a.lesson {
+        float: none;
+        margin: auto;
+        margin-left: 0;
+        width: auto;
+    }
+    .StudentDashboard .lessons .left h2 {
+        text-align: center;
+        margin-right: 0;
     }
     .StudentDashboard .row {
         width: 90%;
-    }
-    .StudentDashboard .lessons .left {
-        padding-right: 0rem;
-        margin-top: 1rem;
-    }
-    a.lesson {
-        margin: 0 0rem;
-        float: none;
     }
     .StudentDashboard .points .right span {
         font-size: 40pt;
@@ -194,6 +205,9 @@ Small devices (landscape phones, 576px and up)
     }
     .StudentDashboard .level .left {
         margin: 1rem auto;
+    }
+    .StudentDashboard .gallery .row .arrows {
+        width: 80%;
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -284,27 +298,30 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
     /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .StudentDashboard .lessons .square span {
-        width: auto;
-        height: 270px;
-        min-width: -webkit-fill-available;
+    .StudentDashboard .lessons .right {
+        margin: auto;
     }
-    .StudentDashboard .lessons .square img {
-        height: 292px;
-        max-height: 292px;
+    .StudentDashboard .lessons .left {
+        padding-left: 0;
+        padding-right: 0rem;
+        margin-right: 0rem;
+        margin: auto;
+        margin-top: 1rem;
         width: 100%;
+        text-align: center;
+    }
+    a.lesson {
+        float: none;
+        margin: auto;
+        margin-left: 0;
+        width: auto;
+    }
+    .StudentDashboard .lessons .left h2 {
+        text-align: center;
+        margin-right: 0;
     }
     .StudentDashboard .row {
         width: 90%;
-    }
-    .StudentDashboard .lessons .left {
-        padding-right: 1rem;
-    }
-    a.lesson {
-        float: left;
-        padding: 1rem;
-        margin: 0 1rem;
-        margin-left: 0;
     }
     .StudentDashboard .points .right span {
         font-size: 25pt;
@@ -406,27 +423,29 @@ Large devices (desktops, 992px and up)
     /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .StudentDashboard .lessons .square span {
-        width: auto;
-        height: 270px;
-        min-width: -webkit-fill-available;
-    }
-    .StudentDashboard .lessons .square img {
-        height: 292px;
-        max-height: 292px;
-        width: 100%;
-    }
-    .StudentDashboard .row {
-        width: 90%;
+    .StudentDashboard .lessons .right {
+        margin: 0;
     }
     .StudentDashboard .lessons .left {
-        padding-right: 2rem;
+        padding-left: 0;
+        margin: 0;
+        padding-right: 0rem;
+        margin-right: 3rem;
+        margin-top: 0;
+        width: 100%;
     }
     a.lesson {
         float: left;
-        padding: 1rem;
         margin: 0 1rem;
         margin-left: 0;
+        width: auto;
+    }
+    .StudentDashboard .lessons .left h2 {
+        text-align: justify;
+        margin-right: 1rem;
+    }
+    .StudentDashboard .row {
+        width: 90%;
     }
     .StudentDashboard .points .right span {
         font-size: 30pt;
@@ -459,6 +478,9 @@ Large devices (desktops, 992px and up)
         right: 0.5rem;
         bottom: 2.5rem;
     }
+    .StudentDashboard .level .col-md-12 span {
+        font-size: 11pt;
+    }
     .StudentDashboard .level .right span.pom,
     .StudentDashboard .level .right  img {
        display: block;
@@ -468,6 +490,9 @@ Large devices (desktops, 992px and up)
     }
     .StudentDashboard .level .left {
         margin: auto;
+    }
+    .StudentDashboard .gallery .row .arrows {
+        width: 85%;
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -515,24 +540,9 @@ Extra large devices (large desktops, 1200px and up)
     /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .StudentDashboard .lessons .square span {
-        width: auto;
-        height: 270px;
-        min-width: -webkit-fill-available;
-    }
-    .StudentDashboard .lessons .square img {
-        height: 292px;
-        max-height: 292px;
-        width: 100%;
-    }
+
     .StudentDashboard .row {
         width: 85%;
-    }
-    a.lesson {
-        float: left;
-        padding: 1rem;
-        margin: 0 1rem;
-        margin-left: 0;
     }
     .StudentDashboard .points .right h3 {
         font-size: 11pt;
@@ -604,24 +614,9 @@ Custom media queries
     /* #Register Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .StudentDashboard .lessons .square span {
-        width: auto;
-        height: 270px;
-        min-width: -webkit-fill-available;
-    }
-    .StudentDashboard .lessons .square img {
-        height: 292px;
-        max-height: 292px;
-        width: 100%;
-    }
+
     .StudentDashboard .row {
         width: 70%;
-    }
-    a.lesson {
-        float: left;
-        padding: 1rem;
-        margin: 0 1rem;
-        margin-left: 0;
     }
     .StudentDashboard .points .right h3 {
         font-size: 12pt;
@@ -663,7 +658,12 @@ Custom media queries
     .StudentDashboard .level .left {
         margin: auto;
     }
+    .StudentDashboard .gallery .row .arrows {
+        width: 68%;
+    }
     /* #studentDashboard Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    /* Footer Page */
     div.footer {
         height: 120px;
     }
@@ -711,4 +711,6 @@ Custom media queries
         width: 85%;
         padding: 2rem 0;
     }
+    /* #Footer Page */
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 }
