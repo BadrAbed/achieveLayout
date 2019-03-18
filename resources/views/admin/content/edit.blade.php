@@ -98,7 +98,7 @@
 
                                     @foreach($main_categories_id as $main_category_id)
                                         <option value="{{$main_category_id->id}}"
-                                                @if($main_category_id->id==$parent->id)  selected @endif>{{$main_category_id->name}}</option>
+                                                @if( $parent && $main_category_id->id==$parent->id)  selected @elseif($main_category_id->id==$content->Categories->id) selected  @endif >{{$main_category_id->name}}</option>
                                     @endforeach
 
                                 </select>
@@ -112,7 +112,9 @@
                                         onchange="changeFuncsub();"
                                         oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
                                         oninput="setCustomValidity('')">
+                                    @if($Subparent)
                                     <option value="{{$Subparent->id}}">{{$Subparent->name}}</option>
+                                    @endif
                                     <option value="">----</option>
 
                                 </select>
@@ -125,7 +127,9 @@
                                 <select class="form-control" name="sub_sub_categories_id" id="sub_sub_categories"
                                         oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
                                         oninput="setCustomValidity('')">
+                                    @if($Subparent&&$parent)
                                     <option value="{{$content->Categories->id}}">{{$content->Categories->name}}</option>
+                                    @endif
                                     <option value="">----</option>
                                 </select>
                             </div>
