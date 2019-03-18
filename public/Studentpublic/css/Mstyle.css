@@ -21,7 +21,6 @@ body {
     position: relative;
     padding:0;
     direction: rtl;
-
 }
 
 h1,
@@ -410,10 +409,17 @@ div.bg {
     max-height: 170px;
 }
 .StudentDashboard .lessons .square {
+<<<<<<< HEAD
     width: 235px;
     max-width: 235px;
     height: 180px;
     max-height: 180px;
+=======
+    width: 243px;
+    max-width: 243px;
+    height: 170px;
+    max-height: 170px;
+>>>>>>> e812ded0896ca4f8728b80480d2b62c97a32e98b
 }
 
 .StudentDashboard .lessons .square span {
@@ -422,8 +428,13 @@ div.bg {
     right: 0;
     border: 1px solid #121f28;
     padding: 0;
+<<<<<<< HEAD
     width: 264px;
     height: 159px;
+=======
+    width: 270px;
+    height: 145px;
+>>>>>>> e812ded0896ca4f8728b80480d2b62c97a32e98b
     min-width: -webkit-fill-available;
 }
 
@@ -697,6 +708,7 @@ div.bg {
 .StudentDashboard .gallery .row .imgs .slide {
     width: 235px;
     height: 180px;
+
     margin: 0 1rem;
     margin-bottom: 1rem;
     border: 1px solid #b5b5b5;
@@ -910,6 +922,7 @@ div.bg {
     max-width: 235px;
     height: 180px;
     max-height: 180px;
+
 }
 
 .table_lessons table .details .name {

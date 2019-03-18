@@ -113,7 +113,7 @@
         margin-top: 0.3rem;
         color: rgba(0, 0, 0, 255);
     }
-    .table_lessons table thead {
+    table thead {
         border: none;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -124,69 +124,36 @@
         width: 1px;
     }
 
-    .table_lessons table tr {
+    table tr {
         display: block;
         margin-bottom: 0.5rem;
         padding: 1rem;
         border: 1px solid #ddd;
     }
 
-    .table_lessons  table td {
+    table td {
         border-bottom: 1px solid #ddd;
         display: block;
         text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
 
-    .table_lessons table td::before {
+    table td::before {
         content: attr(data-label);
         float: right;
         font-size: 13pt;
         color: rgba(27, 97, 127, 255);
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
     .table_lessons table .details.progress2 td::before{
         color: #fff;
         background: #7cc573;
     }
 
-    .table_lessons table td:last-child {
+    table td:last-child {
         border-bottom: 0;
     }
     /* #studentLessons Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /* V_lessons Page */
-    .s_viewLesson .top .left .row {
-        width: 100%;
-        text-align: right;
-        display: block;
-        margin-right: 1rem;
-        margin-top: 1rem;
-    }
-    .s_viewLesson .top {
-        padding-right: 0rem;
-    }
-    .s_viewLesson .top .right span {
-        font-size: 17pt;
-    }
-    .s_viewLesson .row {
-        width: 95%;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li {
-        width: 78px;
-        height: 100px;
-        margin-left: 0;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li span {
-        font-size: 8pt;
-    }
-    .s_viewLesson .bottom .left {
-        margin-top: 1rem;
-        margin-right: 1rem;
-        max-width: 93%;
-    }
-    #content_tab_1 .quest{
-        margin-bottom: 4rem;
-    }
-    /* #V_lessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -219,8 +186,8 @@
     /* #Footer Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 }
-/* ====================================================================================== 
---> sm = Small â‰¥576px
+/* ======================================================================================
+--> sm = Small ≥576px
 --> Max container width 540px
 Small devices (landscape phones, 576px and up)
 */
@@ -242,19 +209,6 @@ Small devices (landscape phones, 576px and up)
     /* #Login Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* studentDashboard Page */
-    .s_viewLesson .top .left .row {
-        width: 100%;
-        text-align: right;
-        display: block;
-        margin-right: 1rem;
-        margin-top: 1rem;
-    }
-    .s_viewLesson .top {
-        padding-right: 0rem;
-    }
-    .s_viewLesson .top .right span {
-        font-size: 17pt;
-    }
     .StudentDashboard .lessons .right {
         margin: auto;
     }
@@ -348,7 +302,7 @@ Small devices (landscape phones, 576px and up)
         margin-top: 0.3rem;
         color: rgba(0, 0, 0, 255);
     }
-    .table_lessons table thead {
+    table thead {
         border: none;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -359,56 +313,36 @@ Small devices (landscape phones, 576px and up)
         width: 1px;
     }
 
-    .table_lessons table tr {
+    table tr {
         display: block;
         margin-bottom: 0.5rem;
         padding: 1rem;
         border: 1px solid #ddd;
     }
 
-    .table_lessons table td {
+    table td {
         border-bottom: 1px solid #ddd;
         display: block;
         text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
 
-    .table_lessons table td::before {
+    table td::before {
         content: attr(data-label);
         float: right;
         font-size: 13pt;
         color: rgba(27, 97, 127, 255);
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
     .table_lessons table .details.progress2 td::before{
         color: #fff;
         background: #7cc573;
     }
 
-    .table_lessons table td:last-child {
+    table td:last-child {
         border-bottom: 0;
     }
     /* #studentLessons Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /* V_lessons Page */
-    .s_viewLesson .row {
-        width: 95%;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li {
-        width: 78px;
-        height: 100px;
-        margin-left: 0;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li span {
-        font-size: 8pt;
-    }
-    .s_viewLesson .bottom .left {
-        margin-top: 1rem;
-        margin-right: 1rem;
-        max-width: 96%;
-    }
-    #content_tab_1 .quest{
-        margin-bottom: 4rem;
-    }
-    /* #V_lessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -446,7 +380,7 @@ Small devices (landscape phones, 576px and up)
 
 }
 /* ======================================================================================
---> md = Medium â‰¥768px
+--> md = Medium ≥768px
 --> Max container width 720px
 Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint
 */
@@ -565,38 +499,6 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /* V_lessons Page */
-    .s_viewLesson .top .left .row {
-        width: 100%;
-        text-align: left;
-        display: block;
-        margin-right: 0rem;
-        margin-top: 0rem;
-    }
-    .s_viewLesson .top {
-        padding-right: 0rem;
-    }
-    .s_viewLesson .top .right span {
-        font-size: 25pt;
-    }
-    .s_viewLesson .row {
-        width: 95%;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li {
-        width: 100px;
-        height: 100px;
-        margin-left: 0.5rem;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li span {
-        font-size: 10pt;
-    }
-    .s_viewLesson .bottom .left {
-        margin-top: 1rem;
-        margin-right: 1rem;
-        max-width: 96%;
-    }
-    /* #V_lessons Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -632,7 +534,7 @@ Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpo
 
 }
 /*  ======================================================================================
---> lg = Large â‰¥992px
+--> lg = Large ≥992px
 --> Max container width 960px
 Large devices (desktops, 992px and up)
 */
@@ -723,7 +625,7 @@ Large devices (desktops, 992px and up)
         margin: auto;
     }
     .StudentDashboard .gallery .row .arrows {
-        width: 80.5%;
+        width: 85%;
     }
     /* #studentDashboard Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -757,13 +659,14 @@ Large devices (desktops, 992px and up)
         max-width: 60%;
     }
     .table_lessons table .details .name h5 {
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
         font-size: 17pt;
         color: rgba(27, 97, 127, 255);
         padding: 0 1rem;
         text-align: justify;
         margin-bottom: 1rem;
     }
-    .table_lessons table thead {
+    table thead {
         border: none;
         clip: rect(0 0 0 0);
         height: auto;
@@ -774,20 +677,21 @@ Large devices (desktops, 992px and up)
         width: auto;
     }
 
-    .table_lessons table tr {
+    table tr {
         display: table-row;
         margin-bottom: 0.5rem;
         padding: 1rem;
         border: none;
     }
 
-    .table_lessons table td {
+    table td {
         border-bottom: 1px solid #e2e2e2;
         display: table-cell;
         text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
 
-    .table_lessons table td::before {
+    table td::before {
         display: none;
     }
     .table_lessons table .details.progress2 td::before{
@@ -795,29 +699,10 @@ Large devices (desktops, 992px and up)
         background: #7cc573;
     }
 
-    .table_lessons table td:last-child {
+    table td:last-child {
         border-bottom: 0;
     }
     /* #studentLessons Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /* V_lessons Page */
-    .s_viewLesson .row {
-        width: 95%;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li {
-        width: 143px;
-        height: 100px;
-        margin-left: 0;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li span {
-        font-size: 14pt;
-    }
-    .s_viewLesson .bottom .left {
-        margin-top: 0rem;
-        margin-right: 0rem;
-        max-width: 100%;
-    }
-    /* #V_lessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -838,7 +723,7 @@ Large devices (desktops, 992px and up)
 
 }
 /* ======================================================================================
---> xl = Extra large â‰¥1200px
+--> xl = Extra large ≥1200px
 --> Max container width 1140px
 Extra large devices (large desktops, 1200px and up)
 */
@@ -871,9 +756,9 @@ Extra large devices (large desktops, 1200px and up)
         font-size: 11pt;
     }
     .StudentDashboard .points .right span {
-        right: 3rem;
-        top: 3.5rem;
-        font-size: 38pt;
+        right: 3.5rem;
+        top: 2.5rem;
+        font-size: 40pt;
     }
     .StudentDashboard .points .left .img img {
         width: 90px;
@@ -939,6 +824,7 @@ Extra large devices (large desktops, 1200px and up)
         max-width: 67%;
     }
     .table_lessons table .details .name h5 {
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
         font-size: 17pt;
         color: rgba(27, 97, 127, 255);
         padding: 0 1rem;
@@ -967,6 +853,7 @@ Extra large devices (large desktops, 1200px and up)
         border-bottom: 1px solid #e2e2e2;
         display: table-cell;
         text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
 
     table td::before {
@@ -982,19 +869,8 @@ Extra large devices (large desktops, 1200px and up)
     }
     /* #studentLessons Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /* V_lessons Page */
-    .s_viewLesson .row {
-        width: 90%;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li {
-        width: 108px;
-        height: 100px;
-        margin-left: 0;
-    }
-    .s_viewLesson .bottom .right .container ul.tabs li span {
-        font-size: 10pt;
-    }
-    /* #V_lessons Page */
+    /*  Page */
+    /* # Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /*  Page */
     /* # Page */
@@ -1099,16 +975,17 @@ Custom media queries
         margin: auto;
         display: inline-block;
         text-align: right;
-        max-width: 68%;
+        max-width: 75%;
     }
     .table_lessons table .details .name h5 {
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
         font-size: 17pt;
         color: rgba(27, 97, 127, 255);
         padding: 0 1rem;
         text-align: justify;
         margin-bottom: 1rem;
     }
-    .table_lessons table thead {
+    table thead {
         border: none;
         clip: rect(0 0 0 0);
         height: auto;
@@ -1119,20 +996,21 @@ Custom media queries
         width: auto;
     }
 
-    .table_lessons table tr {
+    table tr {
         display: table-row;
         margin-bottom: 0.5rem;
         padding: 1rem;
         border: none;
     }
 
-    .table_lessons table td {
+    table td {
         border-bottom: 1px solid #e2e2e2;
         display: table-cell;
         text-align: right;
+        font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
     }
 
-    .table_lessons table td::before {
+    table td::before {
         display: none;
     }
     .table_lessons table .details.progress2 td::before{
@@ -1140,21 +1018,10 @@ Custom media queries
         background: #7cc573;
     }
 
-    .table_lessons table td:last-child {
+    table td:last-child {
         border-bottom: 0;
     }
     /* #studentLessons Page */
-    /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    /* s_viewLesson Page */
-    .s_viewLesson .row {
-        width: 80%;
-    }
-    .s_viewLesson .bottom .left {
-        margin-top: 0rem;
-        margin-right: 0rem;
-        max-width: 100%;
-    }
-    /* #s_viewLesson Page */
     /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
     /* Footer Page */
     div.footer {
@@ -1169,11 +1036,12 @@ Custom media queries
         background: #7fbb50;
         width: 85px;
         height: 85px;
-        display: block;
+        display: block !important;
         text-decoration: none;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
+        display: none;
         -webkit-transition: all 0.3s linear;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;

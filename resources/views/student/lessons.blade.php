@@ -76,8 +76,6 @@
                             @else
                             <i class="fa fa-times-circle"
                                     ></i>
-
-
                                     @endif
                                 </td>
                         </tr>
