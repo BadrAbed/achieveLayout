@@ -88,6 +88,7 @@
                         </div>
                         @php
                             $Subparent= App\Categories::where('id',$content->Categories->parent_id)->first();
+                            if($Subparent)
                             $parent= App\Categories::where('id',$Subparent->parent_id)->first();
 
                         @endphp
@@ -98,7 +99,8 @@
 
                                     @foreach($main_categories_id as $main_category_id)
                                         <option value="{{$main_category_id->id}}"
-                                                @if( $parent && $main_category_id->id==$parent->id)  selected @elseif($main_category_id->id==$content->Categories->id) selected  @endif >{{$main_category_id->name}}</option>
+                                                @if( $parent && $main_category_id->id==$parent->id)  selected
+                                                @elseif($main_category_id->id==$content->Categories->id) selected @endif >{{$main_category_id->name}}</option>
                                     @endforeach
 
                                 </select>
@@ -113,7 +115,7 @@
                                         oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
                                         oninput="setCustomValidity('')">
                                     @if($Subparent)
-                                    <option value="{{$Subparent->id}}">{{$Subparent->name}}</option>
+                                        <option value="{{$Subparent->id}}">{{$Subparent->name}}</option>
                                     @endif
                                     <option value="">----</option>
 
@@ -128,7 +130,7 @@
                                         oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
                                         oninput="setCustomValidity('')">
                                     @if($Subparent&&$parent)
-                                    <option value="{{$content->Categories->id}}">{{$content->Categories->name}}</option>
+                                        <option value="{{$content->Categories->id}}">{{$content->Categories->name}}</option>
                                     @endif
                                     <option value="">----</option>
                                 </select>

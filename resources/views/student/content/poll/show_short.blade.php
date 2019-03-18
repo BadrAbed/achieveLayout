@@ -96,7 +96,7 @@
                                     <div class="col-md-6" style="margin-top: 2rem;">
                                         <h5 class="quest_title">
                                             <i class="fa fa-caret-left" aria-hidden="true"></i>
-                                            اجابات باقي الطلاب</h5>
+                                            إجابات باقي الطلاب</h5>
                                         <div>
                                             <div style="margin: 1rem 0;">
                                                 <span style="display: inline-block; width: 2%; font-size: 12pt;"> نعم</span>

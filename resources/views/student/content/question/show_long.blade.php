@@ -13,9 +13,12 @@
         .retest-btn{
 
             display: inline-block;
-            margin: 10px;
+            margin: 10px 0.5rem;
+            float: left;
         }
-
+        .retest-btn.first {
+            margin-right: 0;
+        }
         .retest-btn a{  width: 100%;}
     </style>
     {{-- ////////////////////// breadcrumb ////////////////////////////// --}}
@@ -76,13 +79,13 @@
                             @endphp
                             <h2 class="alert  test-result-btn"> نتيجه الاختبار </h2>
                             <h3 class="alert  test-result-btn "> {{$result['bonus']}} من {{$result['maxBouns']}}</h3>
-                            <h3 class="quest_title">اجابات الاسئله</h3>
+                            <h3 class="quest_title">اجابات الأسئلة</h3>
                             <table class="table table-striped table-bordered">
                                 <thead>
                                 <td>السؤال</td>
-                                <td>المحاوله الاولي</td>
-                                <td>المحاوله الثانيه</td>
-                                <td>المحاوله الثالثه</td>
+                                <td>المحاولة الاولي</td>
+                                <td>المحاولة الثانية</td>
+                                <td>المحاولة الثالثة</td>
                                 </thead>
 
                                 <tbody>
@@ -102,7 +105,7 @@
 
 
 
-                            <div class="retest-btn">
+                            <div class="retest-btn first">
                                 <a  href="{{route("exception_mark_tab_as_completed_and_navigate_to_next_lesson",["content_id"=>$content->id,"tab_enum"=>\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_SURVEY_TAB_ENUM])}}"
                                    class="btn next-tab">
 

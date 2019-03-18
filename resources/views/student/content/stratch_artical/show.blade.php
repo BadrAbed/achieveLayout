@@ -111,12 +111,7 @@
                                     </button>
                                 </div>
 
-                                <ul class="tabs">
-                                    @for($i=0;$i<count($stretchContentArr);$i++)
-                                        @php $index = $i+1 @endphp
-                                        <li class="<?=($i == 0) ? "current" : ""?>" data-tab="tab-{{$i}}" href="#menu{{$i}}">{{$index}}</li>
-                                    @endfor
-                                </ul>
+
                                 {{--<div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve">--}}
                                 {{--<a rel="nofollow" class="rsbtn_play" accesskey="L" title="ReadSpeaker webReader إستمع إلى هذه الصفحةِ مستخدماً" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=3&amp;lang=ar_ar&amp;voice=Amir&amp;readid=readtextnormal&amp;url=<?php echo urlencode("http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]); ?>">--}}
                                 {{--<span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>استمع</span></span></span>--}}
@@ -140,6 +135,12 @@
                                         read-along audio because your browser is not able to play MP3, Ogg, or WAV
                                         audio formats.</em>
                                 </p>
+                                <ul class="tabs">
+                                    @for($i=0;$i<count($stretchContentArr);$i++)
+                                        @php $index = $i+1 @endphp
+                                        <li class="<?=($i == 0) ? "current" : ""?>" data-tab="tab-{{$i}}" href="#menu{{$i}}">{{$index}}</li>
+                                    @endfor
+                                </ul>
                                 <!-- <div class="row">
                                    <div class="col-md-12">
                                        <p class="playback-rate"

@@ -33,7 +33,7 @@
                         <th scope="col">التصنيف</th>
                         <th scope="col">التاريخ</th>
                         <th scope="col">الدرجة</th>
-                        <th scope="col">الحاله</th>
+                        <th scope="col">الحالة</th>
                     </tr>
                 </thead>
                 <tbody>

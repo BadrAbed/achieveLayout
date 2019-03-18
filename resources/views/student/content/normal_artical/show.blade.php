@@ -112,12 +112,7 @@
                                     </button>
                                 </div>
 
-                            <ul class="tabs">
-                                @for($i=0;$i<count($normalContentArr);$i++)
-                                    @php $index = $i+1 @endphp
-                                    <li class="<?=($i == 0) ? "current" : ""?>" data-tab="tab-{{$i}}" href="#menu{{$i}}">{{$index}}</li>
-                                @endfor
-                            </ul>
+
 
                                 @for($i=0;$i<count($normalContentArr);$i++)
                                 <div class="tab-content <?=($i == 0) ? "current" : ""?>" id="tab-{{$i}}" >
@@ -135,6 +130,12 @@
                                 read-along audio because your browser is not able to play MP3, Ogg, or WAV
                                 audio formats.</em>
                             </p>
+                                <ul class="tabs">
+                                    @for($i=0;$i<count($normalContentArr);$i++)
+                                        @php $index = $i+1 @endphp
+                                        <li class="<?=($i == 0) ? "current" : ""?>" data-tab="tab-{{$i}}" href="#menu{{$i}}">{{$index}}</li>
+                                    @endfor
+                                </ul>
                             <!-- <div class="row">
                                <div class="col-md-12">
                                    <p class="playback-rate"
@@ -191,7 +192,7 @@
                                 <a href="{{url('student_next_tab_button'.'/'.$content->id.'/'.\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_NORMAL_ARTICLE_TAB_ENUM)}}"
                                    class="btn next-tab">
 
-                                    الانشطة     <i class="fa fa-arrow-left"></i>
+                                    الأنشطة     <i class="fa fa-arrow-left"></i>
                                 </a>
                             </div>
                         <div class="clearfix"></div>

@@ -15,9 +15,12 @@
                                       .retest-btn{
 
                                           display: inline-block;
-                                          margin: 10px;
+                                          margin: 10px 0.5rem;
+                                          float: left;
                                       }
-
+                                      .retest-btn.first {
+                                          margin-right: 0;
+                                      }
                                       .retest-btn a{  width: 100%;}
                                   </style>
     {{-- ////////////////////// breadcrumb ////////////////////////////// --}}
@@ -80,11 +83,11 @@
                             <h2 class="alert test-result-btn" > نتيجة الاختبار </h2>
                             <h3 class="alert test-result-btn"> {{$result['degree']}} من {{$result['maxDegree']}}</h3>
                         </div>
-    <h3>إجابات الإسئلة</h3>
+    <h3 style="font-size: 14pt;">إجابات الإسئلة</h3>
                             <table class="table table-striped table-bordered">
                                 <thead>
                                 <td>السؤال</td>
-                                <td>المحاولة الاولى</td>
+                                <td>المحاولة الاولي</td>
                                 <td>المحاولة الثانية</td>
                                 <td>المحاولة الثالثة</td>
                                 </thead>

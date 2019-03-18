@@ -1,4 +1,18 @@
 @extends('studentLayout.app') @section('content')
+    <style>
+
+
+        .retest-btn{
+
+            display: inline-block;
+            margin: 10px 0.5rem;
+            float: left;
+        }
+        .retest-btn.first {
+            margin-right: 0;
+        }
+        .retest-btn a{  width: 100%;}
+    </style>
     <?php
     $pollTrueBefore = \App\PollResults::where('poll_ans', 1)->where('type', 'before')->where('content_id', $content->id)->get()->count();
     $pollFalseBefore = \App\PollResults::where('poll_ans', 0)->where('type', 'before')->where('content_id', $content->id)->get()->count();
@@ -42,14 +56,8 @@
             </div>
             {{-- ////////////////////// Top --- Left ////////////////////////////// --}}
             <div class="col-md-6 left">
-                <div class="desc">
-                    <span>اللغة العربية :</span>
-                    <span>الصف الثالث الابتداىي</span>
-                </div>
-                <div class="desc">
-                    <span>الوحدة الثالثه :</span>
-                    <span>المسلم الصغير</span>
-                </div>
+
+
             </div>
         </div>
         {{-- ////////////////////// Bottom ////////////////////////////// --}}
@@ -103,7 +111,7 @@
                                    <div class="row" style="width: 100%; margin-top: 2rem;">
                                        <h5 class="quest_title col-md-12" style="padding-right: 0">
                                            <i class="fa fa-caret-left" aria-hidden="true"></i>
-                                           اجابات باقي الطلاب</h5>
+                                           إجابات باقي الطلاب</h5>
                                        <div class="col-md-6">
                                            <h3 style="font-size: 12pt;">نتيجة السؤال البعدي</h3>
                                            <div class="quest">
@@ -163,21 +171,24 @@
                                    </div>
                                 </div>
                             </div>
-                                <div class="move_nxt">
-                                    <a href="{{url('student_next_tab_button'.'/'.$content->id.'/'.\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_SURVEY_TAB_ENUM)}}"
-                                       class="btn next-tab">
 
-                                        إلى المقال     <i class="fa fa-arrow-left"></i>
+
+
+
+                                <div class="retest-btn first">
+                                    <a  href="{{route("exception_mark_tab_as_completed_and_navigate_to_next_lesson",["content_id"=>$content->id,"tab_enum"=>\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_SURVEY_TAB_ENUM])}}"
+                                        class="btn next-tab">
+
+                                        الدرس التالي     <i class="fa fa-arrow-left"></i>
                                     </a>
                                 </div>
 
 
-                            <br> <br>
 
-                                <div class="retest">
-                                    <a class="btn btn-info" href="{{route("exception_mark_tab_as_completed_and_navigate_to_next_lesson",["content_id"=>$content->id,"tab_enum"=>\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_SURVEY_TAB_ENUM])}}">
-                                    <i class="fa fa-reply"></i>
-                                      الدرس التالي
+                                <div class="retest-btn">
+                                    <a class="btn next-tab" href="{{url('student_next_tab_button'.'/'.$content->id.'/'.\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_SURVEY_TAB_ENUM)}}">
+                                        <i class="fa fa-arrow-left"></i>
+                                        إلى المقال
                                     </a>
                                 </div>
 
