@@ -56,7 +56,7 @@ class StretchArtical extends Controller
         request()->validate([
             'article' => 'required',
 
-            'sound' => 'required|mimes:mpga,wav| max:10000',
+            'sound' => 'required|mimes:mpga,wav| max:20000',
 
 
         ],
@@ -64,7 +64,7 @@ class StretchArtical extends Controller
 
                 'sound.required' => 'من فضلك اختر ملف صوت ',
                 'sound.mimes' => 'من فضلك اختر ملف صوت من نوع   wav او mp3  ',
-                'sound.max' => ' الملف  يجب ان لا يزيد عن 10 ميجا   ',
+                'sound.max' => ' الملف  يجب ان لا يزيد عن 20 ميجا   ',
             ]);
         $file = $request->file('sound');
 
@@ -182,11 +182,11 @@ class StretchArtical extends Controller
     public function update(Request $request, $content_id)
     {
         request()->validate([
-            'sound' => 'mimes:mpga,wav| max:5000',
+            'sound' => 'mimes:mpga,wav| max:20000',
         ],
             [
                 'sound.mimes' => 'من فضلك اختر ملف صوت من نوع   wav او mp3  ',
-                'sound.max' => ' الملف  يجب ان لا تزيد عن 5 ميجا   ',
+                'sound.max' => ' الملف  يجب ان لا تزيد عن 20 ميجا   ',
             ]);
 
         $article = \App\StretchArtical::where('content_id', $content_id)->first();

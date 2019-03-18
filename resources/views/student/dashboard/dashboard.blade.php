@@ -10,7 +10,7 @@
                 <li>
                     <a href="{{url('studentDashboard')}}">
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        <span>الرئيسية</span>
+                        <span>الرئيسة</span>
                     </a>
                 </li>
 
@@ -22,24 +22,26 @@
         {{-- ////////////////////// Lessons ////////////////////////////// --}}
         <div class="lessons">
             <div class="row">
-                <div class="col-md-3 right">
+                <div class="col-lg-4 col-md-4 col-sm-12 right">
                     <div class="square">
                         <img src="{{asset($current_lesson_detail->cover_image)}}" class="" alt="">
                         <span></span>
                     </div>
                 </div>
-                <div class="col-md-9 left">
+                <div class="col-lg-8 col-md-8 col-sm-12 left">
                     <h2>{{$current_lesson_detail->content_name}}</h2>
                     <p>{{$current_lesson_detail->abstract}}</p>
-
-                    <a href="{{URL::to('studentLessons')}}" class="lesson">
-                        <img src="{{asset('Studentpublic/images/all_lesson.png')}}" class="" alt="">
-                        <span>عرض كل الدروس</span>
-                    </a>
-                    <a href="{{url('content/'.$current_lesson_detail->id)}}" class="lesson">
-                        <img src="{{asset('Studentpublic/images/one_lesson.png')}}" class="" alt="">
-                        <span>عرض  الدرس</span>
-                    </a>
+                    <div class="show">
+                        <a href="{{URL::to('studentLessons')}}" class="lesson">
+                            <img src="{{asset('Studentpublic/images/all_lesson.png')}}" class="" alt="">
+                            <span>عرض كل الدروس</span>
+                        </a>
+                        <a href="{{url('content/'.$current_lesson_detail->id)}}" class="lesson">
+                            <img src="{{asset('Studentpublic/images/one_lesson.png')}}" class="" alt="">
+                            <span>عرض  الدرس</span>
+                        </a>
+                    </div>
+                    
 
                 </div>
             </div>
@@ -47,7 +49,7 @@
         {{-- //////////////////////// Points /////////////////////////// --}}
         <div class="points">
             <div class="row">
-                <div class="col-md-4 all">
+                <div class="col-md-4 col-sm-12 all">
                     <div class="split_right"></div>
                     <div class="split_left"></div>
                     <div class="col-md-6 right">
@@ -65,7 +67,7 @@
 
                     $yesterday=date('Y-m-d',strtotime("-1 days"));
                 @endphp
-                <div class="col-md-4 today">
+                <div class="col-md-4 col-sm-12 today">
                     <div class="split_right"></div>
                     <div class="split_left"></div>
                     <div class="col-md-6 right">
@@ -79,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 past">
+                <div class="col-md-4 col-sm-12 past">
                     <div class="split_right"></div>
                     <div class="split_left"></div>
                     <div class="col-md-6 right">
@@ -98,14 +100,14 @@
         {{-- //////////////////////// Level Par /////////////////////////// --}}
         <div class="level">
             <div class="row">
-                <div class="col-md-2 right">
+                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-12 right">
                     <img src="{{asset('Studentpublic/images/round.png')}}" class="" alt="">
                     <span class="pom"></span>
                     <div class="col-md-12">
-                        <span>مستوي التقدم  </span>
+                        <span>مستوى التقدم  </span>
                     </div>
                 </div>
-                <div class="col-md-10 left">
+                <div class="col-xl-10 col-lg-10 col-md-9 col-sm-12 left">
                     <div id="myProgress">
                         <div class="toolip" data-toggle="tooltip" style="width: {{$PogressPrecentge}}%">
                             <div class="arrow"></div>
@@ -150,7 +152,6 @@
     </div>
 
 @endsection
-
 
 
 

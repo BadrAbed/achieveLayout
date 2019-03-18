@@ -16,10 +16,12 @@
 body {
     line-height: 25px;
     font-size: 16px;
-    font-family: "Crimson Text", serif;
     font-weight: 600;
     color: #777777;
     position: relative;
+    padding:0;
+    direction: rtl;
+
 }
 
 h1,
@@ -401,6 +403,18 @@ div.bg {
 .StudentDashboard .lessons {
     background: #f1f1f1;
 }
+.StudentDashboard .lessons  .right {
+    width: 243px;
+    max-width: 243px;
+    height: 170px;
+    max-height: 170px;
+}
+.StudentDashboard .lessons .square {
+    width: 235px;
+    max-width: 235px;
+    height: 180px;
+    max-height: 180px;
+}
 
 .StudentDashboard .lessons .square span {
     position: absolute;
@@ -408,18 +422,19 @@ div.bg {
     right: 0;
     border: 1px solid #121f28;
     padding: 0;
-    height: 223px;
-    width: 315px;
+    width: 264px;
+    height: 159px;
+    min-width: -webkit-fill-available;
 }
 
 .StudentDashboard .lessons .square img {
     position: relative;
     left: 0;
     right: 0;
-    width: 85%;
-    height: 250px;
-    max-height: 250px;
     margin: auto;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
 }
 
 .StudentDashboard .lessons .left h2 {
@@ -431,7 +446,7 @@ div.bg {
 }
 
 .StudentDashboard .lessons .left p {
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     font-size: 14pt;
     word-spacing: 2px;
     color: rgba(35, 31, 32, 255);
@@ -452,6 +467,8 @@ div.bg {
 }
 .StudentDashboard .lessons .left {
     padding-left: 0;
+    padding-right: 0rem;
+    margin-right: 5rem;
 }
 
 .StudentDashboard .lessons .left a.icon {
@@ -502,11 +519,12 @@ div.bg {
 }
 .StudentDashboard .points .right img {
     position: relative;
-    bottom: 0.5rem;
-    width: 143px;
+    bottom: 0;
+    width: 130px;
     height: 136px;
     max-height: 136px;
-    margin: 0rem;
+    margin: 1rem 0rem;
+    margin-bottom: 0;
 }
 
 .StudentDashboard .points .right span {
@@ -608,7 +626,7 @@ div.bg {
 .toolip {
     position: relative;
     float: right;
-    z-index: 1070;
+    z-index: 0;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.4;
@@ -669,16 +687,16 @@ div.bg {
 }
 
 .StudentDashboard .gallery .row .imgs {
-    height: 128px;
+    height: 180px;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     text-align: center;
     margin: auto;
 }
 
 .StudentDashboard .gallery .row .imgs .slide {
-    width: 204px;
-    height: 128px;
+    width: 235px;
+    height: 180px;
     margin: 0 1rem;
     margin-bottom: 1rem;
     border: 1px solid #b5b5b5;
@@ -758,8 +776,7 @@ div.bg {
     font-size: 5rem;
 }
 
-.StudentDashboard .gallery .row .arrows .prev {
-}
+.StudentDashboard .gallery .row .arrows .prev {}
 
 .StudentDashboard .gallery .row .arrows .next {
 }
@@ -888,8 +905,11 @@ div.bg {
 }
 
 .table_lessons table .details .img {
-    padding-right: 0;
     text-align: center;
+    width: 235px;
+    max-width: 235px;
+    height: 180px;
+    max-height: 180px;
 }
 
 .table_lessons table .details .name {
@@ -898,12 +918,13 @@ div.bg {
 }
 
 .table_lessons table .details img {
-    width: 180px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 .table_lessons table .details p {
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     font-size: 12pt;
     color: rgba(0, 0, 0, 255);
     text-align: start;
@@ -984,7 +1005,7 @@ div.bg {
 .s_viewLesson .top {
     padding-right: 2rem;
     margin: 0rem auto;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     padding-top: 3rem;
 }
 .s_viewLesson .top .right {
@@ -1007,6 +1028,11 @@ div.bg {
     font-size: 25pt;
     color: rgba(20, 36, 43, 255);
     text-align: center;
+
+}
+.s_viewLesson .bottom .right .container ul.tabs li {
+    max-width: 16% !important;
+    min-width: 16% !important;
 }
 .s_viewLesson .bottom {
     background: #fff;
@@ -1218,7 +1244,7 @@ div.bg {
 .s_viewLesson .article {
     border: 1px solid #cacaca;
     padding: 1rem 1.5rem;
-    width: 92%;
+    width: 99%;
 }
 .s_viewLesson  .article .action {
     display: inline-block;
@@ -1236,7 +1262,7 @@ div.bg {
     padding: 4px;
 }
 .s_viewLesson  .article p {
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     font-size: 14pt;
     word-spacing: 2px;
     line-height: 2.2rem;
@@ -1286,7 +1312,7 @@ div.bg {
 
 .s_viewLesson .bottom .right .links {
     border: 1px solid #cacaca;
-    width: 90%;
+    width: 98%;
     margin-top: 0rem;
     display: inline-block;
     padding: 1.5rem;
@@ -1379,7 +1405,7 @@ div.bg {
 
 }
 .s_viewLesson .bottom .left .vocabulary {
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     background: #fff;
     font-size: 12pt;
     color: rgba(20, 36, 43, 255);
@@ -1416,20 +1442,35 @@ div.bg {
     margin: 1rem  0;
     padding: 1rem 0.5rem;
     position: relative;
+    /*border: 1px solid black;*/
+}
+#canvas-holder {
+    font-family: 'Amiri', serif;
+}
+.quest.row {
+    width: 100% !important;
 }
 .quest_h,
 .quest_title,
 .quest div.col-md-6 span{
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     font-size: 14pt;
     color: #000;
     text-align: right;
+    max-width: 100%;
+    line-height: 28px;
+}
+span.h4.quiz-color{
+    font-size: 14pt;
+    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
 }
 .quest_h {
     color: #212529;
     font-size: 12pt;
-    font-family: Cairo-Regular, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     margin-bottom: 2rem;
+    MAX-WIDTH: 100%;
+    line-height: 28px;
 }
 .quest div.col-md-6 {
     margin: 2rem 0;
@@ -1455,7 +1496,18 @@ div.bg {
 .quest #myProgress {
     background-color: #e9ecef;
     border: 0px solid #e9ecef;
-    margin: 0.5rem 0;
+    margin: 0;
+    margin-right: 1rem;
+    width: 50%;
+    display: inline-block;
+}
+.quest .right span {
+    display: block;
+    padding-bottom: 1rem;
+}
+.quest .right span.comment{
+    width: 250px;
+    max-width: 250px;
 }
 .next-tab{
     color: rgba(255, 255, 255, 255);
@@ -1463,13 +1515,13 @@ div.bg {
     border: 1px solid #7fbb50;
     font-size: 17pt;
     border-radius: 0;
-    width: 83px;
+    width: 181px;
     height: 60px;
     padding-top: 0;
 }
 .next-tab i{
     margin: auto;
-    display: block;
+    display: INLINE-BLOCK;
     padding: 1.5rem 1rem;
     text-align: center;
     padding-top: 1.2rem;
@@ -1483,7 +1535,7 @@ div.bg {
 #content_tab_3 [type="radio"]:checked,
 #content_tab_3 [type="radio"]:not(:checked){
     position: absolute;
-    left: -9999px;
+    right: -9999px;
 }
 #content_tab_1 [type="radio"]:checked + label,
 #content_tab_1 [type="radio"]:not(:checked) + label,
@@ -1497,7 +1549,7 @@ div.bg {
     display: inline-block;
     color: #1b617f;
     margin: 1rem 0;
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
     font-size: 14pt;
 }
 #content_tab_1 [type="radio"]:checked + label:before,
@@ -1565,7 +1617,7 @@ div.bg {
 }
 
 #content_tab_2 div.img {
-    width: 92%;
+    width: 99%;
     height: 290px;
 }
 #content_tab_2 div.img img {
@@ -1573,7 +1625,7 @@ div.bg {
     height: 100%;
 }
 #content_tab_2 .audio audio {
-    width: 92%;
+    width: 99%;
 }
 
 #content_tab_2 .audio {
@@ -1595,7 +1647,7 @@ div.bg {
     color: #fff;
     background-color: rgba(27, 97, 127, 255);
     border-color: rgba(27, 97, 127, 255);
-    width: 50%;
+    width: 45%;
     border-radius: 0;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -1604,7 +1656,7 @@ div.bg {
     color: #fff;
     background-color: rgb(253, 131, 105);
     border-color: rgb(253, 131, 105);
-    width: 50%;
+    width: 45%;
     border-radius: 0;
     text-align: center;
 }
@@ -1625,9 +1677,9 @@ div.bg {
     margin-top: 1rem;
 }
 #content_tab_3  .table {
-    width: 92%;
+    width: 100%;
     margin: 1rem 0;
-    font-family: Cairo-SemiBold, WinSoftPro-Medium, AdobeInvisFont;
+    font-family: 'Amiri', serif;
 }
 #content_tab_3  .table .fa-times-circle {
     color: rgb(253, 131, 105);
@@ -1640,17 +1692,17 @@ div.bg {
 }
 .move_nxt {
     display: block;
-    width: 82%;
+    width: AUTO;
     margin: auto;
     text-align: left;
     position: absolute;
     bottom: 0;
-    left: 6rem;
+    left: 3rem;
 }
 .retest {
     position: absolute;
     bottom: 0;
-    left: 13rem;
+    left: 19rem;
     text-align: left;
 }
 .retest a{
@@ -1659,7 +1711,7 @@ div.bg {
     border: 1px solid #7fbb50;
     font-size: 17pt;
     border-radius: 0;
-    width: 150px;
+    width: 170px;
     height: 60px;
     padding: 0.8rem 0.4rem;
 }
@@ -1738,12 +1790,11 @@ div.footer .social a i.fa-facebook {
     background: #7fbb50;
     width: 85px;
     height: 85px;
-    display: block !important;
+    display: block ;
     text-decoration: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    display: none;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -1780,16 +1831,16 @@ div.footer .social a i.fa-facebook {
 
 
 .split_right {
-    border-top: 2px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
     width: 2rem;
     position: absolute;
     right: 0rem;
 }
 .split_left {
-    border-top: 2px solid #d3d3d3;
-    width: 17rem;
+    border-top: 1px solid #d3d3d3;
+    width: -webkit-fill-available;
     position: absolute;
-    margin-right: 9.7rem;
+    left: 0;
 }
 
 
@@ -1859,5 +1910,4 @@ div.footer .social a i.fa-facebook {
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
 }
-
 

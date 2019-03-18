@@ -26,6 +26,7 @@ Route::group(['middleware' => 'createContent'], function () {
     Route::get("normal-artical/create/{content_id}", "NormalArtical@create");
     Route::post("normal-artical/store/{content_id}", "NormalArtical@store");
     Route::get('create/links/{content_id}', 'LinksController@create');
+    Route::get('links/{content_id}/delete', 'LinksController@destroy');
     Route::get('create/vocabularys/{content_id}', 'VocabularyController@create');
     Route::post('store/vocabularys/{content_id}', 'VocabularyController@store');
 

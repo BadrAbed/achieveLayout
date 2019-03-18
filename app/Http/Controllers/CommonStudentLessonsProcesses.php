@@ -202,9 +202,12 @@ class CommonStudentLessonsProcesses extends Controller
         $next_lesson_id = Sortinglesson::getNextLessonOfTheLessonPlan($lesson_plan_id, $current_content_id);
 
 
-        if ($next_lesson_id == null) { // null mean error
+        if ($next_lesson_id == null) {
+            // null mean error
             //   self::DeleteCurrentLessonPlanAndUpdateStatusOfLessonPlanInHistoryTableForUser();
-//            return view("errors.404");
+            $lastLessonPlan = StudentGradesLessonPlansHistory::where('user_id', auth()->id())->orderBy('id', 'desc')->first()->lesson_plan_id;
+            $allLessonPlanContents = StudentLessonPlanProgress::with('content')->where(['user_id' => auth()->id(), 'lesson_plan_id' => $lastLessonPlan])->get();
+            return view('student.placementTest.feedback_for_lessonplan', compact('allLessonPlanContents'));
         } elseif ($next_lesson_id == false) { //false mean there is no next lesson
 
             return view("inc.handleFinishedLessonPlan");

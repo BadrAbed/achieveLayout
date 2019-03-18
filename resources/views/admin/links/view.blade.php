@@ -44,7 +44,7 @@
 
                             <!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
                             <!-- we will add this later since its a little more complicated than the other two buttons -->
-                            <a class="btn btn-danger " onclick="return confirm('kghjgjhg')" href="{{url('/links/'.$value->id.'/destroy') }}"><i class="fa fa-trash"></i> حذف</a>
+                            <a class="btn btn-danger " data-method="delete" onclick="return confirm('هل تريد المسح')" href="{{url('/links/'.$value->id.'/delete') }}"><i class="fa fa-trash"></i> حذف</a>
 
 
                         </td>

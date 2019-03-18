@@ -409,12 +409,12 @@ class QuestionController extends Controller
             return \redirect()->back()->withErrors('لا يوجد سؤال بهذا الرقم ');
         }
         $content = Content::find($row->content_id);
-        if ($content->flowStatus == CONTENT_FOLLOW_STATUS_ENUMS::PUBLISH) {
-            return \redirect()->back()->withErrors('لا يمكنك تعديل السؤال المحتوى تم نشره');
-        }
-        if ($rowCheck) {
-            return \redirect()->back()->withErrors('لا يمكنك تعديل السؤال السؤال تمت الاجابة عليه');
-        }
+//        if ($content->flowStatus == CONTENT_FOLLOW_STATUS_ENUMS::PUBLISH) {
+//            return \redirect()->back()->withErrors('لا يمكنك تعديل السؤال المحتوى تم نشره');
+//        }
+//        if ($rowCheck) {
+//            return \redirect()->back()->withErrors('لا يمكنك تعديل السؤال السؤال تمت الاجابة عليه');
+//        }
         $rules_array = [
 
             'questions.*.question' => 'required|max:191',
@@ -475,6 +475,7 @@ class QuestionController extends Controller
 
 
                 $row->question = $question['question'];
+                $row->ans1 = $question['ans1'];
                 $row->ans2 = $question['ans2'];
                 $row->ans3 = $question['ans3'];
                 $row->ans4 = $question['ans4'];

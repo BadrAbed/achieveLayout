@@ -1,5 +1,23 @@
 @extends('studentLayout.app') @section('content')
+    <style>
 
+        .test-result-btn{
+            left: 0;
+            right: 0;
+            margin: 10px auto;
+            border-radius: 33px !important;
+            width: 33% !important;
+        }
+
+
+        .retest-btn{
+
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .retest-btn a{  width: 100%;}
+    </style>
     {{-- ////////////////////// breadcrumb ////////////////////////////// --}}
     <div class="breadcrumb">
         <div class="row">
@@ -26,9 +44,12 @@
         {{-- ////////////////////// Top ////////////////////////////// --}}
         <div class="row top">
             {{-- ////////////////////// Top --- Right ////////////////////////////// --}}
-            <div class="col-md-6 right">
+            <div class="col-md-12 col-sm-12  right">
                 <i class="fa fa-caret-left" aria-hidden="true"></i>
                 <span>{{$content->content_name}}</span>
+                <div class="" style="float:left;">
+                    {!! $content->content_location !!}
+                </div>
             </div>
             {{-- ////////////////////// Top --- Left ////////////////////////////// --}}
             <div class="col-md-6 left">
@@ -53,7 +74,8 @@
                                 $answers=App\Answer_Questions::whereIn('question_id',$questions_ids)->where('user_id',auth()->id())->get();
 
                             @endphp
-
+                            <h2 class="alert  test-result-btn"> نتيجه الاختبار </h2>
+                            <h3 class="alert  test-result-btn "> {{$result['bonus']}} من {{$result['maxBouns']}}</h3>
                             <h3 class="quest_title">اجابات الاسئله</h3>
                             <table class="table table-striped table-bordered">
                                 <thead>
@@ -66,29 +88,29 @@
                                 <tbody>
                                 @foreach($answers as $answer)
                                     <tr>
-                                        <td>{!!$answer->type->question!!}</td>
+
+                                        <td>{{ str_replace ("","ﷺ" , str_replace("","ﷺ" ,$answer->type->question)) }}</td>
                                         <td>{!!($answer->reattempt_questions==1)?'<span><i class="fa fa-check-circle"></i></span>':'</span><i class="fa fa-times-circle"></i></span>'!!} </td>
                                         <td>@if($answer->reattempt_questions!=1 ){!!($answer->reattempt_questions==2)?'<span><i class="fa fa-check-circle"></i></span>':'</span><i class="fa fa-times-circle"></i></span>'!!} @else -- @endif</td>
-                                        <td>@if($answer->reattempt_questions!=1 && $answer->reattempt_questions!=2){!!($answer->reattempt_questions==3)?'<span><i class="fa fa-check-circle"></i></span>':'<span><i class="fa fa-times-circle"></i></span>'!!} @else -- @endif</td>
+                                        <td>@if($answer->reattempt_questions!=1 && $answer->reattempt_questions!=2){!!($answer->reattempt_questions==3 && $answer->degree==1)?'<span><i class="fa fa-check-circle"></i></span>':'<span><i class="fa fa-times-circle"></i></span>'!!} @else -- @endif</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
 
                             </table>
-                            <h2 class="alert"> نتيجه الاختبار </h2>
-                            <h3 class="alert "> {{$result['bonus']}} من {{$result['maxBouns']}}</h3>
 
 
 
-                            <div class="move_nxt">
-                                <a href="{{route("exception_mark_tab_as_completed_and_navigate_to_next_lesson",["content_id"=>$content->id,"tab_enum"=>\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_QUESTIONS_TAB_ENUM])}}"
+
+                            <div class="retest-btn">
+                                <a  href="{{route("exception_mark_tab_as_completed_and_navigate_to_next_lesson",["content_id"=>$content->id,"tab_enum"=>\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_LONG_SURVEY_TAB_ENUM])}}"
                                    class="btn next-tab">
 
-                                    <i class="fa fa-reply"></i>
+                                    الدرس التالى     <i class="fa fa-arrow-left"></i>
                                 </a>
                             </div>
-                            <div class="retest">
-                                <a class="btn btn-info" href="{{url('reattemptQuestions/'.$content->id).'/'.'addationquest'}}">
+                            <div class="retest-btn">
+                                <a class="btn next-tab" href="{{url('reattemptQuestions/'.$content->id).'/'.'addationquest'}}">
                                     <i class="fa fa-retweet" aria-hidden="true"></i>
                                     اعاده الاختبار
                                 </a>
@@ -110,28 +132,29 @@
                             <br></br>
                             <label class="t-lable">
                                 <span class="quest_title">
-                        {{$addationquests[0]->question}}
+                                     {{ str_replace ("","ﷺ" , str_replace("","ﷺ" , $addationquests[0]->question)) }}
+
                         </span>
                             </label>
                             <div class="selections">
                                 <div>
                                     <input id="ans1" type="radio" name="studentAns" class="ans">
-                                    <label for="ans1">{{$addationquests[0]->ans1}}</label>
+                                    <label for="ans1"> {{ str_replace ("","ﷺ" , str_replace("","ﷺ" ,$addationquests[0]->ans1)) }}</label>
                                 </div>
                                 <div>
                                     <input id="ans2" type="radio" name="studentAns" class="ans">
-                                    <label for="ans2">{{$addationquests[0]->ans2}}</label>
+                                    <label for="ans2">{{ str_replace ("","ﷺ" , str_replace("","ﷺ" ,$addationquests[0]->ans2)) }}</label>
                                 </div>
                                 @if($addationquests[0]->ans3 !=null)
                                     <div>
                                         <input id="ans3" type="radio" name="studentAns" class="ans">
-                                        <label for="ans3">{{$addationquests[0]->ans3}}</label>
+                                        <label for="ans3">{{ str_replace ("","ﷺ" , str_replace("","ﷺ" ,$addationquests[0]->ans3)) }}</label>
                                     </div>
                                 @endif
                                 @if($addationquests[0]->ans4 !=null)
                                     <div>
                                         <input id="ans4" type="radio" name="studentAns" class="ans">
-                                        <label for="ans4">{{$addationquests[0]->ans4}}</label>
+                                        <label for="ans4">{{ str_replace ("","ﷺ" , str_replace("","ﷺ" ,$addationquests[0]->ans4)) }}</label>
                                     </div>
                                 @endif
 

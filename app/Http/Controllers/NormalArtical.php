@@ -55,7 +55,7 @@ class NormalArtical extends Controller
         request()->validate([
             'article' => 'required',
 
-            'sound' => 'required|mimes:mpga,wav| max:10000',
+            'sound' => 'required|mimes:mpga,wav| max:20000',
 
 
         ],
@@ -63,7 +63,7 @@ class NormalArtical extends Controller
 
                 'sound.required' => 'من فضلك اختر ملف صوت ',
                 'sound.mimes' => 'من فضلك اختر ملف صوت من نوع   wav او mp3  ',
-                'sound.max' => ' الملف  يجب ان لايزيد عن 10 ميجا   ',
+                'sound.max' => ' الملف  يجب ان لايزيد عن 20 ميجا   ',
 
             ]);
 
@@ -171,11 +171,11 @@ class NormalArtical extends Controller
     public function update(Request $request, $content_id)
     {
         request()->validate([
-            'sound' => 'mimes:mpga,wav| max:5000',
+            'sound' => 'mimes:mpga,wav| max:20000',
         ],
             [
                 'sound.mimes' => 'من فضلك اختر ملف صوت من نوع   wav او mp3  ',
-                'sound.max' => ' الملف  يجب ان لا تزيد عن 5 ميجا   ',
+                'sound.max' => ' الملف  يجب ان لا تزيد عن 20 ميجا   ',
             ]);
 
         $article = \App\NormalArtical::where('content_id', $content_id)->first();

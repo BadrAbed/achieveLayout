@@ -16,10 +16,10 @@ $fourth_tab_url = URL::to("/".'student'.'/content/poll/'.$content_id.'/'.'1'."/"
 
 @endphp
 <ul class="tabs">
-    <li class="tab-link {{(request()->url()==$first_tab_url?"current":"")}}" data-tab="tab-1" onclick="location.href='{{$first_tab_url}}';">
+    <li class="tab-link {{(request()->url()==$first_tab_url?"current":"")}}" data-tab="tab-1" o  nclick="location.href='{{$first_tab_url}}';">
         {{--<img src="{{asset('Studentpublic/images/tab1.png')}}" class="" alt="">--}}
         <span class="{{(request()->url()==$first_tab_url?"active":"current")}}" ></span>
-        <span class="">السؤال القبلى</span>
+        <span class="">السؤال القبلي</span>
     </li>
     <li class="tab-link {{(request()->url()==$second_tab_url?"current":"")}}" data-tab="tab-2" onclick="location.href='{{$second_tab_url}}';">
         {{--<img src="{{asset('Studentpublic/images/tab2.png')}}" class="" alt="">--}}

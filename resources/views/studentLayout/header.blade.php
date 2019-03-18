@@ -182,20 +182,26 @@
                 <img src="{{asset('Studentpublic/images/logo.png')}}" alt="">
             </a>
         </div>
+        @if(auth()->user()->is_permission==\App\Http\OwnClasses\TYPE_OF_USERS_ENUMS::STUDENT)
+        @if(\App\Http\Controllers\StudentPlacementTest::checkIfPlacementTestHasbeenCompleteOrNotByUser(auth()->user()->student_grade_id))
         <div class="col-md-9 left">
             <div class="links">
-                <a href="{{url('studentDashboard')}}">الرئيسية</a>
+                <a href="{{url('studentDashboard')}}">الرئيسة</a>
                 <a href="{{url('studentLessons')}}">
                     <img src="{{asset('Studentpublic/images/book.png')}}" class="" alt="">
                     <span>عرض الدروس</span>
                 </a>
             </div>
+            @endif
+            @endif
             <ul id="menu">
                 <li>
                     <span>{{auth()->user()->name}}</span>
                     <img class="user" src="{{asset('Studentpublic/images/user.png')}}" class="" alt="">
                 </li>
                 <hr>
+                @if(auth()->user()->is_permission==\App\Http\OwnClasses\TYPE_OF_USERS_ENUMS::STUDENT)
+                    @if(\App\Http\Controllers\StudentPlacementTest::checkIfPlacementTestHasbeenCompleteOrNotByUser(auth()->user()->student_grade_id))
                 <li>
                     <input id="check01" type="checkbox" name="menu"/>
                     <label for="check01">    <?=
@@ -208,7 +214,8 @@
                 </li>
                 
             </ul>
-            
+            @endif
+            @endif
         </div>
     </div>
 </div>

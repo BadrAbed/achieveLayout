@@ -10,7 +10,7 @@
                 <li>
                     <a href="{{url('studentDashboard')}}">
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        <span>الرئيسية</span>
+                        <span>الرئيسة</span>
                     </a>
                 </li>
                 <li>
@@ -28,11 +28,15 @@
         <div class="bg"></div>
         {{-- ////////////////////// Top ////////////////////////////// --}}
         <div class="row top">
-            {{-- ////////////////////// Top --- Right ////////////////////////////// --}}
-            <div class="col-md-6 right">
+            <div class="col-md-12 col-sm-12  right">
                 <i class="fa fa-caret-left" aria-hidden="true"></i>
                 <span>{{$content->content_name}}</span>
+                <div class="" style="float:left;">
+                    {!! $content->content_location !!}
+                </div>
             </div>
+            {{-- ////////////////////// Top --- Right ////////////////////////////// --}}
+
             {{-- ////////////////////// Top --- Left ////////////////////////////// --}}
             <div class="col-md-6 left">
             </div>
@@ -45,7 +49,7 @@
                     @include('studentLayout.studentTabs')
                     <section id="content_tab_2" >
                         <div class="img">
-                            <img src="{{url('Studentpublic/images/article_bg.png')}}">
+                            <img src="{{url('/'.$content->lessonImage)}}">
                         </div>
                         <div class="audio">
                             <audio id="passage-audio" class="passage" controls>
@@ -114,18 +118,13 @@
                                     <li class="<?=($i == 0) ? "current" : ""?>" data-tab="tab-{{$i}}" href="#menu{{$i}}">{{$index}}</li>
                                 @endfor
                             </ul>
-                                {{--<div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve">--}}
-                                {{--<a rel="nofollow" class="rsbtn_play" accesskey="L" title="ReadSpeaker webReader إستمع إلى هذه الصفحةِ مستخدماً" href="//app-eu.readspeaker.com/cgi-bin/rsent?customerid=3&amp;lang=ar_ar&amp;voice=Amir&amp;readid=readtextnormal&amp;url=<?php echo urlencode("http://".$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]); ?>">--}}
-                                {{--<span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>استمع</span></span></span>--}}
-                                {{--<span class="rsbtn_right rsimg rsplay rspart"></span>--}}
-                                {{--</a>--}}
-                                {{--</div>--}}
+
                                 @for($i=0;$i<count($normalContentArr);$i++)
                                 <div class="tab-content <?=($i == 0) ? "current" : ""?>" id="tab-{{$i}}" >
 
                                 <div id="menu{{$i}}" class="<?=($i == 0) ? "current" : ""?> ">
                                     <div id="content">
-                                        {!! $normalContentArr[$i] !!}
+                                        {!! str_replace ("","ﷺ" , str_replace("","ﷺ" , $normalContentArr[$i])) !!}
                                     </div>
 
                                     </div>
@@ -192,7 +191,7 @@
                                 <a href="{{url('student_next_tab_button'.'/'.$content->id.'/'.\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_NORMAL_ARTICLE_TAB_ENUM)}}"
                                    class="btn next-tab">
 
-                                    <i class="fa fa-reply"></i>
+                                    الانشطة     <i class="fa fa-arrow-left"></i>
                                 </a>
                             </div>
                         <div class="clearfix"></div>

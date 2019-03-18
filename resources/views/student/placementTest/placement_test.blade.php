@@ -1,214 +1,223 @@
-@extends('layouts.app')
-<link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
 <style>
-
-
-    /*----------quiz.css---------------*/
-
-    .question {
-        background: #f1f1f1;
-        padding: 20px;
-        color: #000;
-        border-bottom-right-radius: 55px;
-        border-top-left-radius: 55px;
-
-
+    #header ul#menu {
+        margin: 1rem 0 !important;
+        display: inline-block !important;
+        text-align: left;
+        position: absolute;
+        left: 23rem;
     }
 
-    #qid {
-        margin-right: 0px;
-        background-color: #5cb85c;
-        color: #ffffff;
-    }
-
-    .container ul.quizz {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    ul.quizz li {
-        color: #AAAAAA;
+    .test_level {
         display: block;
-        position: relative;
+        margin: 6rem auto;
+        width: 50%;
+        font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+
+    .test_level .title {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 1rem 0.5rem;
+        direction: rtl;
+        font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+    }
+
+    .test_level .title h3 {
+        display: inline-block;
+        font-family: Cairo-Bold, WinSoftPro-Medium, AdobeInvisFont;
+
+    }
+
+    .test_level .title h3:last-child {
+        text-align: left;
         float: left;
-        width: 100%;
-        height: 50px;
-
     }
 
-    ul.quizz li input[type=radio] {
-        position: absolute;
-        visibility: hidden;
-    }
-
-    ul.quizz li label {
+    .test_level div.num {
         display: block;
-        position: relative;
-        font-weight: 100;
-
-        padding: 25px 25px 25px 80px;
-        margin: 10px auto;
-        height: 30px;
-        z-index: 9;
-        cursor: pointer;
-        -webkit-transition: all 0.25s linear;
+        margin-bottom: 1rem;
+        text-align: right;
+        direction: rtl;
+        float: none;
     }
 
-    ul.quizz li:hover label {
-        color: #000
-
-    }
-
-    ul.quizz li .check {
+    .test_level div.num h5 {
+        background: #7fbb50;
+        padding: 1rem;
+        color: #fff;
+        text-align: center;
         display: block;
-        position: absolute;
-        border: 5px solid #AAAAAA;
-        border-radius: 100%;
-        height: 30px;
-        width: 30px;
-        top: 30px;
-        left: 20px;
-        z-index: 5;
-        transition: border .25s linear;
-        -webkit-transition: border .25s linear;
+        width: 5%;
     }
 
-    ul.quizz li:hover .check {
-        border: 5px solid #40BC03;
+    .test_level .content {
+        background-color: #e9ecef;
+        padding: 1rem 1rem;
     }
 
-    ul.quizz li .check::before {
-        display: block;
-        position: absolute;
-        content: '';
-        border-radius: 100%;
-        height: 14px;
-        width: 14px;
-        top: 3px;
-        left: 3px;
+    .test_level .content .p {
+        margin: 1rem 0;
+        line-height: 2rem;
+        font-family: 'Amiri', serif;
+        FONT-SIZE: 13PT;
+    }
+
+    #return-to-top {
+        display: none !important;
+    }
+
+    button.lesson {
+        color: rgba(255, 255, 255, 255);
+        background: #7fbb50;
+        border: 1px solid #7fbb50;
+        padding: 0.2rem 4rem;
+        margin-left: 1rem;
+        float: left;
+        text-align: left;
         margin: auto;
-        transition: background 0.25s linear;
-        -webkit-transition: background 0.25s linear;
+        width: 100%;
+        display: block;
     }
 
-    input[type=radio]:checked ~ .check {
-        border: 5px solid #40BC03;
+    .test_level [type="radio"]:checked + label,
+    .test_level [type="radio"]:not(:checked) + label {
+        position: relative;
+        padding-right: 28px;
+        cursor: pointer;
+        line-height: 20px;
+        display: inline-block;
+        color: #1b617f;
+        margin: 1rem 0;
+        font-family: 'Amiri', serif;
+        font-size: 14pt;
     }
 
-    input[type=radio]:checked ~ .check::before {
-        background: #40BC03;
-    }
-
-    input[type=radio]:checked ~ label {
-        color: #000000;
-    }
-
-    /*----------riple bubble-----------------*/
-    ul.quizz {
-        margin: 0 auto;
-    }
-
-    /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
-    .ink {
-        display: inline;
+    .test_level [type="radio"]:checked,
+    .test_level [type="radio"]:not(:checked) {
         position: absolute;
-        background: #75ba48;
+        right: -9999px;
+    }
+
+    .selections div {
+        display: block;
+    }
+
+    .test_level [type="radio"]:checked + label:before,
+    .test_level [type="radio"]:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #80ba4c;
+        border-radius: 0;
+        background: #fff;
+    }
+
+    .test_level [type="radio"]:checked + label:after,
+    .test_level [type="radio"]:not(:checked) + label:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #80ba4c;
+        position: absolute;
+        top: 4px;
+        right: 4px;
         border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .test_level [type="radio"]:not(:checked) + label:after {
+        opacity: 0;
+        -webkit-transform: scale(0);
         transform: scale(0);
     }
 
-    /*animation effect*/
-    .ink.animate {
-        animation: ripple 0.65s linear;
+    div.btn {
+        display: block;
+        text-align: left;
+    }
+    div.btn a,
+    div.btn button {
+        display: inline-block;
+        color: #fff !important;
+        background: #7fbb50;
+        border: 1px solid #7fbb50;
+        padding: 1rem;
+        border-radius: 0;
     }
 
-    @keyframes ripple {
-        /*scale the element to 250% to safely cover the entire link and fade it out*/
-        100% {
-            opacity: 0;
-            transform: scale(2.5);
-        }
+    div.btn a:hover {
+        color: #fff;
+        background: #7fbb50;
+        border: 1px solid #7fbb50;
     }
-
-
+    form{
+        height: 1000px;
+    }
 </style>
+@extends('studentLayout.app')
+<link href="https://fonts.googleapis.com/css?family=Mirza" rel="stylesheet">
+
 <?php $totalQuestions = \App\PlacementTestQuestions::where('exam_id', $exam_id)->get() ?>
 <?php $totalUserAnswers = \App\StudentPlacementTestAnswers::where(['exam_id' => $exam_id, 'user_id' => auth()->id()])->get() ?>
 @section('content')
-    <div class="col-md-12">
-        <!--paneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeel-->
 
-
-        <br>
-        <h2>إختبار قياس مستوي</h2>
-
-        <div class="row"><br><br>
-            <div class="col-md-12  ">
-
-                @if(session('message'))
-                    <div class="alert-info">{{session('message')}} </div>
-                @endif
-                <div id="quiz">
-
-
-                    @foreach($placement_test as $placement)
-                        <?php $index = 1 ?>
-                        <?php $i = 1 ?>
-                        <form action="{{url('Student/AnswerPlacementTest/'.$placement->exam_id).'/'.$placement->id}}"
-                              method="post">
-                            {{csrf_field()}}
-                            <div class="question editor_content">
-                                <h3><span class="label label-warning" id="qid">{{$totalUserAnswers->count()+1}}</span>
-                                </h3>
-                                <p>
-
-                            <span id="question">   {!!$placement->question!!}
-                                                </span>
-                                </p>
-                            </div>
-
-                            <ul class="quizz editor_content">
-
-                                @foreach($placement->placementQuestionAnswers as $placementQuestionAnswers)
-
-                                    <li>
-                                        <input type="radio" id="{{$placementQuestionAnswers->id}}" name="ans"
-                                               value="{{$placementQuestionAnswers->id}}">
-                                        <label for="{{$placementQuestionAnswers->id}}"
-                                               class="element-animation">{{$i++}} <i
-                                                    class="	fa fa-minus"></i> {{$placementQuestionAnswers->answer}}
-                                        </label>
-                                        <div class="check"></div>
-                                    </li>
-
-                                @endforeach
-                            </ul>
-
-                </div>
-
-
+    <div class="test_level">
+        @foreach($placement_test as $placement)
+            <?php $index = 1 ?>
+            <?php $i = 1 ?>
+        <form action="{{url('Student/AnswerPlacementTest/'.$placement->exam_id).'/'.$placement->id}}"
+              method="post">
+            @csrf
+            <div class="title">
+                <h3>اختبار قياس مستوى</h3>
+                <h3> الأسئلة {{ $totalQuestions->count() }}/{{$totalUserAnswers->count()+1}}</h3>
             </div>
 
 
-        </div>
+            <div class="content">
+                @if(session('message'))
+                    <div class="alert-info">{{session('message')}} </div>
+                @endif
 
 
-        <br><br>
+                    <div class="num">
+                        <h5>{{$totalUserAnswers->count()+1}}</h5>
+                    </div>
+                    <div class="p">
+                        {!!$placement->question!!} </div>
+            </div>
+            <div class="selections">
+                @foreach($placement->placementQuestionAnswers as $placementQuestionAnswers)
 
-        <button type="submit" class="btn btn-lg btn-block btn-success"><i class="	fa fa-share"></i> التالى</button>
-        <!-- <a href="#" class="btn btn-lg btn-block btn-primary"><i class="	fa fa-reply"></i> السؤال السابق</a> -->
-        <!-- <a href="#" class="btn btn-lg btn-danger"><i class="fa fa-reply"></i> تسجيل الخروج </a> -->
+                    <div class="field">
 
-        <!--paneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeel-->
+
+                            <input  type="radio" id="{{$placementQuestionAnswers->id}}" name="ans" value="{{$placementQuestionAnswers->id}}">
+                            <label for="{{$placementQuestionAnswers->id}}">{{$placementQuestionAnswers->answer}}</label>
+
+                    </div>
+                    <input name="content_id" value="254" type="hidden">
+                    <input name="type" value="before" type="hidden">
+                @endforeach
+            </div>
+
+            @endforeach
+            <div class="btn">
+                <a class="btn" href="{{url('logout')}}" >
+                    تسجيل الخروج
+                </a>
+                <button class="btn" type="submit">
+                    <i class="fa fa-arrow-left"></i>
+                    التالي
+                </button>
+            </div>
+
         </form>
-        @endforeach
-        @include('inc.errorMessages')
     </div>
-
-
-
-    <h3> الاسئلة {{ $totalQuestions->count() }}/{{$totalUserAnswers->count()+1}}</h3>
 @endsection
 
 

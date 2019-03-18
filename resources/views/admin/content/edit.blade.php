@@ -18,42 +18,146 @@
                 </div>
                 <div class="0"></div>
                 </h3>
-                
- </div>
-<div class="panel panel-green">
 
-                <div class="panel-heading"> <h3 class="text-center"><i class="fa fa-edit"></i> تعديل محتوى <b style="font-size: 22px;">{{ $content->content_name }}</b></h3></div>
+            </div>
+            <div class="panel panel-green">
+
+                <div class="panel-heading"><h3 class="text-center"><i class="fa fa-edit"></i> تعديل محتوى <b
+                                style="font-size: 22px;">{{ $content->content_name }}</b></h3></div>
                 <div class="panel-body">
                     @include('inc.errorMessages')
-                {!! Form::open(['action' => ['ContentController@update', $content->id],'files' => 'true', 'method' => 'PUT']) !!}
-                <div class="row form-group">
-                    <div class="col-md-2">
-                        {{Form::label('education_level_id', 'المرحلة الدراسية')}}
-                    </div>
-                    <div class="col-md-4">
-                        <div class="ui input  fluid ">
+                    {!! Form::open(['action' => ['ContentController@update', $content->id],'files' => 'true', 'method' => 'PUT']) !!}
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            {{Form::label('education_level_id', 'المرحلة الدراسية')}}
+                        </div>
+                        <div class="col-md-4">
+                            <div class="ui input  fluid ">
 
-                            <select class="form-control" name="education_level_id" required id="sort-item">
+                                <select class="form-control" name="education_level_id" required id="sort-item">
 
 
-                                @foreach($levels as $parent)
+                                    @foreach($levels as $parent)
 
-                                    <option value="{{$parent->id}}" disabled="">
-                                        &#10000; {{$parent->name}}  </option>
+                                        <option value="{{$parent->id}}" disabled="">
+                                            &#10000; {{$parent->name}}  </option>
 
-                                    @if ($parent->children->count())
-                                        @foreach ($parent->children as $child)
-                                            <option
+                                        @if ($parent->children->count())
+                                            @foreach ($parent->children as $child)
+                                                <option
 
-                                                    @if(old("education_level_id") == $child->id)
-                                                    {{"selected=''"}}
-                                                    @endif
+                                                        @if(old("education_level_id") == $child->id)
+                                                        {{"selected=''"}}
+                                                        @endif
 
-                                                    value="{{ $child->id }}"> &emsp; &#9000;
-                                                &#9000; {{ $child->name }}</option>
-                                        @endforeach
+                                                        value="{{ $child->id }}"> &emsp; &#9000;
+                                                    &#9000; {{ $child->name }}</option>
+                                            @endforeach
 
+                                        @endif
+                                    @endforeach
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-2 text-left">
+                            {{Form::label('country_id', 'الدوله')}}
+                        </div>
+                        <div class="col-md-4">
+                            <div class="ui input fluid">
+                                <select class="form-control" name="countries">
+                                    @if($content->countries!=null)
+                                        <option value="{{$content->country->id}}">{{$content->country->name}}</option>
+                                    @else
+                                        <option value="">عام</option>
                                     @endif
+                                    @foreach($countries as $country)
+                                        <option value="{{$country->id}}">{{$country->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            {{Form::label('main_categories_id', 'التصنيفات ')}}
+                        </div>
+                        @php
+                            $Subparent= App\Categories::where('id',$content->Categories->parent_id)->first();
+                            $parent= App\Categories::where('id',$Subparent->parent_id)->first();
+
+                        @endphp
+                        <div class="col-md-4">
+                            <div class="ui input fluid">
+                                <select class="form-control" name="main_categories_id" id="main_categories" required
+                                        onchange="changeFunc();">
+
+                                    @foreach($main_categories_id as $main_category_id)
+                                        <option value="{{$main_category_id->id}}"
+                                                @if($main_category_id->id==$parent->id)  selected @endif>{{$main_category_id->name}}</option>
+                                    @endforeach
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="ui input fluid">
+                                <select class="form-control" name="sub_categories_id" id="sub_categories"
+                                        onchange="changeFuncsub();"
+                                        oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
+                                        oninput="setCustomValidity('')">
+                                    <option value="{{$Subparent->id}}">{{$Subparent->name}}</option>
+                                    <option value="">----</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="ui input fluid">
+                                <select class="form-control" name="sub_sub_categories_id" id="sub_sub_categories"
+                                        oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
+                                        oninput="setCustomValidity('')">
+                                    <option value="{{$content->Categories->id}}">{{$content->Categories->name}}</option>
+                                    <option value="">----</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            {{ Form::label('goal_id_list', 'نواتج التعلم', array('class' => 'col-form-label')) }}
+
+                        </div>
+                        <div class="col-md-4 {{ $errors->has('goal_id_list') ? 'has-error' : ''}}">
+
+                            <select style="z-index: 100" name="goal_id_list[]" data-live-search="true" required
+                                    id="countries"
+                                    class="ui dropdown fluid" multiple="" data-actions-box="true">
+
+                                @foreach ($learingGoal as  $learingGoal)
+
+                                    <option
+
+                                            @if(old("goal_id_list"))
+
+                                            @if(in_array($learingGoal->id,old("goal_id_list")))
+                                            {{"selected=''"}}
+                                            @endif
+                                            @elseif(in_array($learingGoal->id,$releted_content_goals))
+                                            {{"selected=''"}}
+                                            @endif
+
+                                            value="{{$learingGoal->id}}">{{$learingGoal->learing_goals_name}}</option>
+
                                 @endforeach
                             </select>
 
@@ -61,116 +165,33 @@
 
                     </div>
 
-                    <div class="col-md-2 text-left">
-                        {{Form::label('country_id', 'الدوله')}}
-                    </div>
-                    <div class="col-md-4">
-                        <div class="ui input fluid">
-                            <select class="form-control" name="countries" >
-                                @if($content->countries!=null)
-                                    <option value="{{$content->country->id}}">{{$content->country->name}}</option>
-                                @else
-                                    <option value="">عام</option>
-                                @endif
-                                @foreach($countries as $country)
-                                    <option value="{{$country->id}}">{{$country->name}}</option>
-                                @endforeach
-                            </select>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            {{Form::label('content_name', 'اسم الدرس')}}
+                        </div>
+
+                        <div class="col-md-4">
+                            {{Form::text('content_name', $content->content_name, ['class' => 'form-control','required','minlength="4"'])}}
                         </div>
 
                     </div>
-
-                </div>
-                <div class="row form-group">
-                    <div class="col-md-2">
-                        {{Form::label('main_categories_id', 'التصنيفات ')}}
-                    </div>
-                    <div class="col-md-4">
-                        <div class="ui input fluid">
-                            <select class="form-control" name="main_categories_id" id="main_categories" required onchange="changeFunc();">
-                                <option value="{{$content->Categories->id}}">{{$content->Categories->name}}</option>
-                                @foreach($main_categories_id as $main_category_id)
-                                    <option value="{{$main_category_id->id}}">{{$main_category_id->name}}</option>
-                                @endforeach
-
-                            </select>
+                    <div class="row form-group">
+                        <div class="col-md-2 ">
+                            <label for="content_location"> مكان الدرس</label>
                         </div>
-
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="ui input fluid">
-                            <select class="form-control" name="sub_categories_id" id="sub_categories"  onchange="changeFuncsub();"  oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
-                                    oninput="setCustomValidity('')">
-                                <option value="">----</option>
-
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="ui input fluid">
-                            <select class="form-control" name="sub_sub_categories_id" id="sub_sub_categories" oninvalid="this.setCustomValidity('من فضلك اختر تصنيف اضافى  ')"
-                                    oninput="setCustomValidity('')">
-                                <option value="">----</option>
-                            </select>
+                        <div class="col-md-10 {{ $errors->has('content_location') ? 'has-error' : ''}}">
+                            <textarea name="content_location" required class="form-control"
+                                      rows="5">{{$content->content_location}}</textarea>
                         </div>
                     </div>
-                </div>
-
-                <div class="row form-group">
-                <div class="col-md-2">
-                    {{ Form::label('goal_id_list', 'نواتج التعلم', array('class' => 'col-form-label')) }}
-
-                </div>
-                <div class="col-md-4 {{ $errors->has('goal_id_list') ? 'has-error' : ''}}">
-
-                    <select style="z-index: 100" name="goal_id_list[]" data-live-search="true" required id="countries"
-                            class="ui dropdown fluid" multiple="" data-actions-box="true">
-
-                        @foreach ($learingGoal as  $learingGoal)
-
-                            <option
-
-                                    @if(old("goal_id_list"))
-
-                                    @if(in_array($learingGoal->id,old("goal_id_list")))
-                                    {{"selected=''"}}
-                                    @endif
-                                    @elseif(in_array($learingGoal->id,$releted_content_goals))
-                                    {{"selected=''"}}
-                                    @endif
-
-                                    value="{{$learingGoal->id}}">{{$learingGoal->learing_goals_name}}</option>
-
-                        @endforeach
-                    </select>
-
-                </div>
-
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-2">
-                        {{Form::label('content_name', 'اسم الدرس')}}
+                    <div class="row form-group">
+                        <div class="col-md-2 ">
+                            {{Form::label('poll', 'السؤال القبلي والبعدي')}}
+                        </div>
+                        <div class="col-md-10">
+                            {{Form::text('poll', $content->poll, ['class' => 'form-control','required'])}}
+                        </div>
                     </div>
-
-                    <div class="col-md-4">
-                        {{Form::text('content_name', $content->content_name, ['class' => 'form-control','required','minlength="4"'])}}
-                    </div>
-
-                </div>
-
-
-                <div class="row form-group">
-                    <div class="col-md-2 ">
-                        {{Form::label('poll', 'السؤال القبلي والبعدي')}}
-                    </div>
-                    <div class="col-md-10">
-                        {{Form::text('poll', $content->poll, ['class' => 'form-control','required'])}}
-                    </div>
-                </div>
                     <div class="row form-group">
                         <div class="col-md-2 ">
                             <label for="abstract">تمهيد مختصر للسؤال القبلى</label>
@@ -180,34 +201,34 @@
                         </div>
                     </div>
 
-                <div class="row form-group">
-                    <div class="col-md-2 ">
-                        {{Form::label('abstract', 'نبذه مختصره')}}
-                    </div>
-                    <div class="col-md-10">
+                    <div class="row form-group">
+                        <div class="col-md-2 ">
+                            {{Form::label('abstract', 'نبذه مختصره')}}
+                        </div>
+                        <div class="col-md-10">
                          <textarea class="form-control " required name="abstract" rows="5"
                                    id="abstract"> {{$content->abstract}}</textarea>
+                        </div>
                     </div>
-                </div>
-                @if ($errors->first('abstract'))
-                    <div class="alert alert-danger">
+                    @if ($errors->first('abstract'))
+                        <div class="alert alert-danger">
 
-                        {{  $errors->first('abstract')}}
+                            {{  $errors->first('abstract')}}
 
-                    </div>
-                @endif
-                <div class="row form-group">
-                    <div class="col-md-2">
-                        {{ Form::label('image', 'صورة الغلاف', array('class' => 'col-form-label')) }}
-                    </div>
-                    <div class="col-md-10">
-                        {{ Form::file('image',array('accept="image/*"')) }}
+                        </div>
+                    @endif
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            {{ Form::label('image', 'صورة الغلاف', array('class' => 'col-form-label')) }}
+                        </div>
+                        <div class="col-md-10">
+                            {{ Form::file('image',array('accept="image/*"')) }}
 
+                        </div>
+                        <div>
+                            <img alt="image" src="{{url('')}}/{{$content->cover_image}}" height="150" width="150">
+                        </div>
                     </div>
-                    <div>
-                        <img alt="image" src="{{url('')}}/{{$content->cover_image}}" height="150" width="150">
-                    </div>
-                </div>
                     <div class="row form-group">
                         <div class="col-md-2">
                             {{ Form::label('image', 'صورة الدرس', array('class' => 'col-form-label')) }}
@@ -221,11 +242,11 @@
                         </div>
                     </div>
 
-                <div class="empty"></div>
-                {{ Form::button('التالى <i class="fa fa-share"></i>', ['type' => 'submit', 'class' => 'btn btn-success'] )  }}
+                    <div class="empty"></div>
+                    {{ Form::button('التالى <i class="fa fa-share"></i>', ['type' => 'submit', 'class' => 'btn btn-success'] )  }}
+                </div>
             </div>
         </div>
-</div>
         </div>
     </section>
 

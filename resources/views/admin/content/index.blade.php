@@ -412,7 +412,7 @@
                             '<a class="btn btn-info btn-sm" style="display: inline;margin-left:5px ;" href="' + review + '"> <span class="fa fa-desktop" aria-hidden="true"></span> &nbsp;مراجعة</a>'
                             + "@endif" +
                             '<a class="btn btn-success btn-sm" style="display: inline;margin-left:5px ;" href="' + Edit + '"> <span class="fa fa-edit" aria-hidden="true"></span> &nbsp;تعديل</a>' +
-                            '<a class="btn btn-danger btn-sm"  style="display: inline;margin-left:5px ;" href="' + Delete + '"> <span class="fa fa-trash" aria-hidden="true"></span> &nbsp;مسح</a>' +
+                            '<a class="btn btn-danger btn-sm" onclick="return confirm(\'هل تريد المسح\')"  style="display: inline;margin-left:5px ;" href="' + Delete + '"> <span class="fa fa-trash" aria-hidden="true"></span> &nbsp;مسح</a>' +
 
                             '' +
                             '' +

@@ -10,7 +10,7 @@
                 <li>
                     <a href="{{url('studentDashboard')}}">
                         <i class="fa fa-home" aria-hidden="true"></i>
-                        <span>الرئيسية</span>
+                        <span>الرئيسة</span>
                     </a>
                 </li>
                 <li>
@@ -29,9 +29,12 @@
         {{-- ////////////////////// Top ////////////////////////////// --}}
         <div class="row top">
             {{-- ////////////////////// Top --- Right ////////////////////////////// --}}
-            <div class="col-md-6 right">
+            <div class="col-md-12 col-sm-12  right">
                 <i class="fa fa-caret-left" aria-hidden="true"></i>
                 <span>{{$content->content_name}}</span>
+                <div class="" style="float:left;">
+                    {!! $content->content_location !!}
+                </div>
             </div>
             {{-- ////////////////////// Top --- Left ////////////////////////////// --}}
             <div class="col-md-6 left">
@@ -45,7 +48,7 @@
                     @include('studentLayout.studentTabs')
                     <section id="content_tab_2" >
                         <div class="img">
-                            <img src="{{url('Studentpublic/images/article_bg.png')}}">
+                            <img src="{{url('/'.$content->lessonImage)}}">
                         </div>
                         <div class="audio">
                             <audio id="passage-audio" class="passage" controls>
@@ -125,7 +128,8 @@
 
                                         <div id="menu{{$i}}" class="<?=($i == 0) ? "current" : ""?> ">
                                             <div id="content">
-                                                {!! $stretchContentArr[$i] !!}
+                                                {!! str_replace ("","ﷺ" , str_replace("","ﷺ" , $stretchContentArr[$i])) !!}
+
                                             </div>
 
                                         </div>
@@ -191,7 +195,7 @@
                                 <a href="{{url('student_next_tab_button'.'/'.$content->id.'/'.\App\Http\OwnClasses\STUDENT_ASSIGNED_LESSON_PLANS_ENUMS::GET_STRETCH_ARTICLE_TAB_ENUM)}}"
                                    class="btn next-tab">
 
-                                    <i class="fa fa-reply"></i>
+                                    الى الانشطة     <i class="fa fa-arrow-left"></i>
                                 </a>
                             </div>
 

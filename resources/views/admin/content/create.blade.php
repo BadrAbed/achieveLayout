@@ -155,6 +155,16 @@
                                        value="{{old('content_name')}}" id="content_name">
                             </div>
                         </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-2 ">
+                                <label for="content_location"> مكان الدرس</label>
+                            </div>
+                            <div class="col-md-10 {{ $errors->has('content_location') ? 'has-error' : ''}}">
+                                <textarea name="content_location" required class="form-control" rows="5">{{old('content_location')}}</textarea>
+                            </div>
+                        </div>
+
                         <div class="row form-group">
                             <div class="col-md-2 ">
                                 <label for="poll">السؤال القبلي والبعدي</label>

@@ -174,6 +174,7 @@ class ContentController extends Controller
             'education_level_id' => 'required', //|in:' . implode(",", $this->userAllowedGrades->toArray()),//validate that the choice has been selected within the allowed values
             'goal_id_list' => ["bail", "array", "distinct", "required", "in:" . implode(",", $learningGoals)], //array of goals ids
             'main_categories_id' => 'required',
+            'content_location' => 'required',
             'poll' => 'required|max:5000',
             'hint' => 'required|max:5000',
             'image' => 'required|mimes:jpeg,jpg,png| max:1000',
@@ -193,6 +194,7 @@ class ContentController extends Controller
                 'education_level_id.required' => 'من فضلك ادخل المرحله الدارسيه',
 
                 'goal_id_list.required' => 'من فضلك ادخل ناتج التعلم ',
+                'content_location.required' => 'من فضلك ادخل مكان الدرس',
                 'Lesson_image.required' => 'من فضلك ادخل صورة الدرس ',
                 'Lesson_image.mimes' => 'من فضلك اختر صوره من نوع  jpeg او  jpg او png  ',
                 'Lesson_image.max' => ' الصوره يجب ان لا تزيد عن 1 ميجا   ',
@@ -259,6 +261,7 @@ class ContentController extends Controller
             $contents->content_name = Input::get('content_name');
             $contents->hint = Input::get('hint');
             $contents->poll = Input::get('poll');
+            $contents->content_location = Input::get('content_location');
             $contents->cover_image = $sorename;
             $contents->lessonImage = $sorename2;
             $contents->abstract = Input::get('abstract');
@@ -534,6 +537,7 @@ class ContentController extends Controller
             'education_level_id' => 'required',
             'goal_id_list' => ["bail", "array", "distinct", "required", "in:" . implode(",", $learningGoals)], //array of goals ids
             'main_categories_id' => 'required',
+            'content_location' => 'required',
 
             'poll' => 'required|max:5000',
             'hint' => 'required|max:5000',
@@ -551,11 +555,13 @@ class ContentController extends Controller
         if ($request->has('image')) {
             $custom['Lesson_image'] = 'mimes:jpeg,jpg,png|max:1000';
         }
+
+
         request()->validate($custom,
             ['content_name.required' => 'من فضلك ادخل اسم المحتوى',
                 'content_name.max' => 'الاسم يجب الايزيد عن 191',
                 'education_level_id.required' => 'من فضلك ادخل المرحله الدارسيه',
-
+                'content_location.required' => 'من فضلك ادخل مكان الدرس',
                 'goal_id_list.required' => 'من فضلك ادخل ناتج التعلم ',
                 'goal_id_list.in' => 'من فضلك ادخل ناتج تعلم صحيح',
                 'main_categories_id.required' => 'من فضلك ادخل اسم التصنيف',
@@ -579,11 +585,28 @@ class ContentController extends Controller
                 'links.*.href.regex' => 'من فضلك ادخل الرابط بشكل صحيح مثل http://google.com ']);
 
         DB::transaction(function () use ($id, $request) {
+            if (Input::get('sub_categories_id') == null) {
+                $Catg_id = Input::get('main_categories_id');
+
+            }
+            if (Input::get('sub_categories_id') != null && Input::get('sub_sub_categories_id') == null) {
+                $Catg_id = Input::get('sub_categories_id');
+
+            }
+            if (Input::get('sub_sub_categories_id') != null) {
+                $Catg_id = Input::get('sub_sub_categories_id');
+
+            }
             $contents = Content::find($id);
+            if ($Catg_id != $contents->category_id) {
+                $contents->category_id = $Catg_id;
+            }
+
             $contents->education_level_id = Input::get('education_level_id');
             $contents->countries = Input::get('countries');
             $contents->content_name = Input::get('content_name');
             $contents->poll = Input::get('poll');
+            $contents->content_location = Input::get('content_location');
             $contents->hint = Input::get('hint');
             if (Input::has('image')) {
                 $file = Input::file('image');

@@ -29,9 +29,16 @@
     </nav>  --}}
     {{-- =====================BreadCrumbs================= --}}
     {{-- =====================#BreadCrumbs================= --}}
-    
+
     <main class="">
         @yield('content')
+        <div id='cntnr' style="z-index: 10000">
+            <ul id='items'>
+                <li>
+                    <button onclick="a()">قاموس المتحدة</button>
+                </li>
+            </ul>
+        </div>
         @yield('CustomContentAfterGeneralJquery')
     </main>
 </div>

@@ -169,8 +169,11 @@ class LinksController extends Controller
      * @param  \App\Links $links
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Links $links)
+    public function destroy($id)
     {
-        //
+
+       Links::find($id)->delete();
+        Session::flash('message', 'لقد تم الحذف  بنجاح');
+        return \redirect()->back();
     }
 }

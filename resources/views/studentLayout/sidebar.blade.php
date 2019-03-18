@@ -15,7 +15,7 @@
 </div>
 </div>
 {{-- ////////////////////// Bottom --- Left ////////////////////////////// --}}
-<div class="col-md-4 left">
+<div class="col-xl-4 col-lg-12 col-md-12 left">
     <div class="vocabulary_col">
         <div class="vocabulary_title">
             <h2>مترادفات</h2>
@@ -25,8 +25,8 @@
                 <tbody>
                 @foreach(Session::get('vocab') as $vocab)
                     <tr>
-                        <td class="txt col-md-3">{{$vocab->word}}</td>
-                        <td  class="mean col-md-9">{{$vocab->meaning}}</td>
+                        <td class="txt col-md-3 col-sm-3 col-xs-3">{{$vocab->word}}</td>
+                        <td  class="mean col-md-9 col-sm-9 col-xs-3">{{$vocab->meaning}}</td>
                     </tr>
                 @endforeach
 

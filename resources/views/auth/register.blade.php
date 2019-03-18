@@ -16,7 +16,7 @@
                     <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                     <span class="highlight"> </span>
                     <span class="bar"></span>
-                    <label for=""> الإسم</label>
+                    <label for=""> الاسم</label>
                 </div>
                 <div class="form-holder">
                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -38,7 +38,7 @@
                 </div>
                 {{----}}
                 <div class="form-holder">
-                    {{ Form::label('countriesList', 'الدوله ', array('class' => '')) }}
+                    {{ Form::label('countriesList', 'الدولة ', array('class' => '')) }}
                     <select required  name="countriesList" data-live-search="true" id="countries" class="ui dropdown fluid" data-actions-box="true">
                         <option></option>
                         <option value="58888">we</option>
