@@ -21,6 +21,7 @@ body {
     position: relative;
     padding:0;
     direction: rtl;
+
 }
 
 h1,
@@ -409,17 +410,10 @@ div.bg {
     max-height: 170px;
 }
 .StudentDashboard .lessons .square {
-<<<<<<< HEAD
     width: 235px;
     max-width: 235px;
     height: 180px;
     max-height: 180px;
-=======
-    width: 243px;
-    max-width: 243px;
-    height: 170px;
-    max-height: 170px;
->>>>>>> e812ded0896ca4f8728b80480d2b62c97a32e98b
 }
 
 .StudentDashboard .lessons .square span {
@@ -428,13 +422,8 @@ div.bg {
     right: 0;
     border: 1px solid #121f28;
     padding: 0;
-<<<<<<< HEAD
     width: 264px;
     height: 159px;
-=======
-    width: 270px;
-    height: 145px;
->>>>>>> e812ded0896ca4f8728b80480d2b62c97a32e98b
     min-width: -webkit-fill-available;
 }
 
@@ -507,7 +496,11 @@ div.bg {
     border-left: 1px solid #d3d3d3;
     position: relative;
 }
-
+.StudentDashboard .points .all .right ,
+.StudentDashboard .points .today .right ,
+.StudentDashboard .points .past .right{
+    text-align: center;
+}
 .StudentDashboard .points .col-md-4:last-child {
     border-left: none;
 }
@@ -520,9 +513,8 @@ div.bg {
     background: red;
     padding: 1rem;
     margin: 1rem 0;
-    width: 133px;
+    width: 140px;
     height: 133px;
-
 }
 .StudentDashboard .points .left .img  img {
     width: 90px;
@@ -531,28 +523,29 @@ div.bg {
 .StudentDashboard .points .right img {
     position: relative;
     bottom: 0;
-    width: 130px;
-    height: 136px;
-    max-height: 136px;
+    width: 110px;
+    height: 116px;
+    max-height: 116px;
     margin: 1rem 0rem;
     margin-bottom: 0;
 }
 
 .StudentDashboard .points .right span {
     position: absolute;
-    top: 2.5rem;
-    right: 3.5rem;
+    top: 0;
+    right: 0;
     left: 0;
     padding: 0;
     margin: 0;
     font-family: BebasNeueBold, WinSoftPro-Medium, AdobeInvisFont;
-    font-size: 40pt;
+    font-size: 35px;
     color: rgba(80, 191, 234, 255);
-    width: 48px;
+    width: 110px;
     bottom: 0;
-    height: 48px;
+    height: 116px;
     text-align: center;
     vertical-align: middle;
+    margin: 3rem 3.2rem;
 }
 
 .StudentDashboard .points .right h3 {
@@ -563,6 +556,7 @@ div.bg {
     margin-bottom: 1rem;
     position: relative;
     padding: 0 0.8rem;
+    margin-right: 2rem;
 }
 
 .StudentDashboard .points .all .left .img {
@@ -708,7 +702,6 @@ div.bg {
 .StudentDashboard .gallery .row .imgs .slide {
     width: 235px;
     height: 180px;
-
     margin: 0 1rem;
     margin-bottom: 1rem;
     border: 1px solid #b5b5b5;
@@ -922,7 +915,7 @@ div.bg {
     max-width: 235px;
     height: 180px;
     max-height: 180px;
-
+    min-width: 235px;
 }
 
 .table_lessons table .details .name {
@@ -931,9 +924,10 @@ div.bg {
 }
 
 .table_lessons table .details img {
-    width: 100%;
-    height: 100%;
+    width: 235px;
+    height: 180px;
     margin: auto;
+    min-width: 235px;
 }
 
 .table_lessons table .details p {
@@ -1018,7 +1012,7 @@ div.bg {
 .s_viewLesson .top {
     padding-right: 2rem;
     margin: 0rem auto;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     padding-top: 3rem;
 }
 .s_viewLesson .top .right {
@@ -1044,8 +1038,8 @@ div.bg {
 
 }
 .s_viewLesson .bottom .right .container ul.tabs li {
-    max-width: 16% !important;
-    min-width: 16% !important;
+    max-width: 16.3% !important;
+    min-width: 16.3% !important;
 }
 .s_viewLesson .bottom {
     background: #fff;
@@ -1064,6 +1058,7 @@ div.bg {
     margin: 0px;
     padding: 0px;
     list-style: none;
+    width: 100%;
 }
 
 .s_viewLesson .bottom .right .container ul.tabs li {
@@ -1453,9 +1448,10 @@ div.bg {
 #content_tab_3,
 #content_tab_4{
     margin: 1rem  0;
-    padding: 1rem 0.5rem;
+    padding: 1rem 2rem;
     position: relative;
     /*border: 1px solid black;*/
+    width: 100%;
 }
 #canvas-holder {
     font-family: 'Amiri', serif;
@@ -1710,7 +1706,7 @@ span.h4.quiz-color{
     text-align: left;
     position: absolute;
     bottom: 0;
-    left: 3rem;
+    left: 1.2rem;
 }
 .retest {
     position: absolute;
