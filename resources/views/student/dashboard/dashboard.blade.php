@@ -31,19 +31,20 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 left">
                     <h2>{{$current_lesson_detail->content_name}}</h2>
                     <p>{{$current_lesson_detail->abstract}}</p>
-                    <div class="show">
-                        <a href="{{URL::to('studentLessons')}}" class="lesson">
-                            <img src="{{asset('Studentpublic/images/all_lesson.png')}}" class="" alt="">
-                            <span>عرض كل الدروس</span>
-                        </a>
-                        <a href="{{url('content/'.$current_lesson_detail->id)}}" class="lesson">
-                            <img src="{{asset('Studentpublic/images/one_lesson.png')}}" class="" alt="">
-                            <span>عرض  الدرس</span>
-                        </a>
-                    </div>
+                    
                     
 
                 </div>
+            </div>
+            <div class="row show" style="display:block;">
+                    <a href="{{URL::to('studentLessons')}}" class="lesson">
+                        <img src="{{asset('Studentpublic/images/all_lesson.png')}}" class="" alt="">
+                        <span>عرض كل الدروس</span>
+                    </a>
+                    <a href="{{url('content/'.$current_lesson_detail->id)}}" class="lesson">
+                        <img src="{{asset('Studentpublic/images/one_lesson.png')}}" class="" alt="">
+                        <span>عرض  الدرس</span>
+                    </a>
             </div>
         </div>
         {{-- //////////////////////// Points /////////////////////////// --}}

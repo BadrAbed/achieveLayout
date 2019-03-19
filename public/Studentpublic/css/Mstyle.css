@@ -452,9 +452,10 @@ div.bg {
     color: rgba(35, 31, 32, 255);
     text-align: justify;
     padding: 1rem 0;
-    max-width: 100%;
+    max-width: 994px;
     line-height: 2rem;
     min-height: 190px;
+    width: 994px;
 }
 
 .StudentDashboard .lessons .left a {
