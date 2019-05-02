@@ -1,4 +1,19 @@
 @media (max-width: 991px) {
+    #header .row {
+        margin: auto;
+        width: 100%;
+    }
+    #header .row .col-md-3,
+    #header .row .col-md-9 {
+        width: 50%;
+    }
+    #header .row .col-md-9 {
+        top: 0.5rem;
+    }
+    .breadcrumb .row {
+        margin: auto;
+        width: 100%;
+    }
     #header .left .links {
         display: none;
     }
@@ -10,12 +25,24 @@
     }
     .StudentDashboard .row {
         margin: auto;
-        width: 90%;
+        width: 100%;
     }
     .StudentDashboard .row.show {
         margin: auto;
-        width: 50%;
+        width: 100%;
+        text-align: center;
     }
+    .StudentDashboard .lessons .left p {
+        max-width: 90%;
+        min-height: 145px;
+        max-height: 145px;
+        width: 90%;
+        margin: auto;
+        height: 145px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
     .StudentDashboard .lessons .right {
         height: 170px;
         max-height: 170px;
@@ -34,18 +61,6 @@
         text-align: center;
         margin-right: 0;
         width: 100%;
-    }
-    .StudentDashboard .lessons .left p {
-        text-align: justify;
-        padding: 1rem 0;
-        max-width: 90%;
-        line-height: 2rem;
-        min-height: 150px;
-        max-height: 150px;
-        width: 90%;
-        height: 150px;
-        display: block;
-        margin: auto;
     }
     a.lesson {
         float: none;
@@ -100,21 +115,17 @@
         text-align: center;
         margin: auto;
     }
-    .StudentDashboard .points .row .caret {
-        display: inline-flex;
-        width: 85%;
-        bottom: 15%;
-    }
-    .StudentDashboard .points .row .caret  i.left {
-        margin-left: -3rem;
-    }
+   
+   
+
+
     .StudentDashboard .gallery .row .arrows {
         height: 0;
-        width: 85%;
-        bottom: 50%;
+        width: 93%;
+        bottom: 45%;
     }
     .StudentDashboard .gallery .row .arrows i.prev {
-        margin-right: -2rem;
+        margin-right: -1rem;
     }
     #return-to-top {
         width: 55px;
@@ -124,40 +135,26 @@
     #return-to-top i {
         margin: 0;
     }
-}
-@media (max-width: 767px) {
-    #header .row {
+    div.footer .row {
         margin: auto;
-        width: 100%;
+        width: 85%;
+        padding: 1rem 0;
+        padding-bottom: 0;
     }
-    #header .row .col-md-3,
-    #header .row .col-md-9 {
-        width: 50%;
-    }
-    #header .row .col-md-9 {
-        top: 0.5rem;
-    }
-    .breadcrumb .row {
+    div.footer .row div:first-child {
         margin: auto;
-        width: 100%;
-    }
-    .StudentDashboard .row {
-        margin: auto;
-        width: 100%;
-    }
-    .StudentDashboard .row.show {
-        margin: auto;
-        width: 100%;
+        flex: 100%;
+        max-width: 100%;
         text-align: center;
+        display: block;
+        margin-bottom: 1.5rem;
     }
-    .StudentDashboard .lessons .left p {
-        max-width: 90%;
-        min-height: 145px;
-        max-height: 145px;
-        width: 90%;
-        height: 145px;
-        overflow: hidden;
-        margin-bottom: 2rem;
+    div.footer .row div.social{
+        flex: 100%;
+        max-width: 100%;
+    }
+    div.footer h5 {
+        text-align: center;
     }
     .StudentDashboard .level .row {
         padding: 2rem 0.5rem;
@@ -167,22 +164,21 @@
         text-align: center;
         margin-top: 1rem;
         margin-bottom: 2rem;
+        width: 90%;
+        max-width: 90%;
+        flex: 90%;
     }
     .StudentDashboard .level .right span.pom {
-        right: 41.5%;
+        right: 42%;
     }
     .StudentDashboard .level .left {
         margin: auto;
         top: 0;
+        width: 90%;
+        max-width: 90%;
+        flex: 90%;
     }
-    .StudentDashboard .gallery .row .arrows {
-        height: 0;
-        width: 93%;
-        bottom: 45%;
-    }
-    .StudentDashboard .gallery .row .arrows i.prev {
-        margin-right: -1rem;
-    }
+    
     .StudentDashboard .points .row .caret {
         display: inline-flex;
         width: 98%;
@@ -194,21 +190,10 @@
     .StudentDashboard .points .row .caret i.right {
         margin-right: 1rem;
     }
-    div.footer .row {
-        margin: auto;
-        width: 85%;
-        padding: 1rem 0;
-        padding-bottom: 0;
-    }
-    div.footer .row div:first-child {
-        margin: auto;
-        width: 100%;
-        text-align: center;
-        display: block;
-        margin-bottom: 1.5rem;
-    }
-    div.footer h5 {
-        text-align: center;
-    }
+}
+@media (max-width: 767px) {
+
+    
+    
 
 }
