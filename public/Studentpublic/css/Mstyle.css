@@ -135,12 +135,14 @@ a:focus {
     float: left;
 }
 
-#header ul#menu>li img.user {
+#header ul#menu>li img.user,
+#header ul#menu_small_screen>li img.user {
     width: 50px;
     height: 50px;
 }
 
-#header ul#menu>hr {
+#header ul#menu>hr,
+#header ul#menu_small_screen>hr {
     border: none;
     border-left: 2px solid #7fbb50;
     height: 30px;
@@ -152,7 +154,8 @@ a:focus {
     margin-top: 0.7rem;
 }
 
-#header ul#menu>li {
+#header ul#menu>li,
+#header ul#menu_small_screen>li {
     float: left;
     list-style-type: none;
     position: relative;
@@ -161,8 +164,18 @@ a:focus {
     color: rgba(35, 31, 32, 255);
     text-align: justify;
 }
-
-#header label {
+#header ul#menu_small_screen {
+    margin: 0;
+    padding: 0 10px;
+    background: #fff;
+    color: rgba(35, 31, 32, 255);
+    display: none;
+    float: left;
+    position: relative;
+    top: 0.5rem;
+}
+#header label,
+#header ul#menu_small_screen label {
     position: relative;
     display: block;
     padding: 0 18px 0 12px;
@@ -170,7 +183,8 @@ a:focus {
     cursor: pointer;
 }
 
-#header label:after {
+#header label:after,
+#header ul#menu_small_screen label:after {
     content: "";
     position: absolute;
     display: block;
@@ -186,28 +200,27 @@ a:focus {
 }
 
 
-/* #header label:hover,
-#header input:checked~label {
-    background: rgba(0, 0, 0, .3);
-} */
-
-#header input:checked~label:after {
+#header input:checked~label:after,
+#header ul#menu_small_screen input:checked~label:after {
     border-top: 0 solid rgba(255, 255, 255, .5);
     border-bottom: 8px solid #f38055;
     transition: border-top .1s, border-bottom .1s .1s;
 }
 
-#header input {
+#header input,
+#header ul#menu_small_screen input {
     display: none
 }
 
-#header input:checked~ul.submenu {
+#header input:checked~ul.submenu,
+#header ul#menu_small_screen input:checked~ul.submenu {
     max-height: 300px;
     width: 180px;
     transition: max-height 0.5s ease-in;
 }
 
-#header ul.submenu {
+#header ul.submenu,
+#header ul#menu_small_screen ul.submenu {
     width: 180px;
     max-height: 0;
     padding: 0;
@@ -220,7 +233,8 @@ a:focus {
     min-width: 100%;
 }
 
-#header ul.submenu li a {
+#header ul.submenu li a,
+#header ul#menu_small_screen ul.submenu li a {
     display: block;
     padding: 12px;
     color: #ddd;
@@ -230,7 +244,8 @@ a:focus {
     white-space: nowrap;
 }
 
-#header ul.submenu li a:hover {
+#header ul.submenu li a:hover,
+#header ul#menu_small_screen ul.submenu li a:hover {
     background: rgba(0, 0, 0, .3);
 }
 
@@ -764,7 +779,7 @@ div.bg {
     color: #fff;
 }
 
-.StudentDashboard .gallery .row .arrows {
+.StudentDashboard .gallery .row .arrows{
     display: inline-flex;
     justify-content: space-between;
     height: 0;
@@ -773,13 +788,28 @@ div.bg {
     top: 0;
     bottom: 12rem;
     margin: auto;
+    cursor: pointer;
+}
+.StudentDashboard .points .row .caret {
+    display: none;
+    justify-content: space-between;
+    height: 0;
+    position: absolute;
+    width: 67%;
+    top: 0;
+    bottom: 12rem;
+    margin: auto;
+    cursor: pointer;
 }
 
-.StudentDashboard .gallery .row .arrows i {
+
+.StudentDashboard .gallery .row .arrows i,
+.StudentDashboard .points .row .caret i {
     background-color: transparent;
     color: #b5b5b5;
     cursor: pointer;
     font-size: 5rem;
+    
 }
 
 .StudentDashboard .gallery .row .arrows .prev {}

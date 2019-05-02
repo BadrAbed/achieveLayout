@@ -50,49 +50,55 @@
         {{-- //////////////////////// Points /////////////////////////// --}}
         <div class="points">
             <div class="row">
-                <div class="col-md-4 col-sm-12 all">
-                    <div class="split_right"></div>
-                    <div class="split_left"></div>
-                    <div class="col-md-6 right">
-                        <img src="{{asset('Studentpublic/images/message.png')}}" class="" alt="">
-                        <span>{{\App\Http\Controllers\QuestionController::getAllDegreesForStudent()}}</span>
-                        <h3>إجمالي النقاط</h3>
-                    </div>
-                    <div class="col-md-6 left">
-                        <div class="img">
-                            <img src="{{asset('Studentpublic/images/cup.png')}}" class="" alt="">
+                <div class="caret">
+                    <i class="fa fa-caret-right right" aria-hidden="true"></i>
+                    <i class="fa fa-caret-left left" aria-hidden="true"></i>
+                </div>
+                <div class="points_slide">
+                    <div class="col-md-4 col-sm-12 all point">
+                        <div class="split_right"></div>
+                        <div class="split_left"></div>
+                        <div class="col-md-6 right">
+                            <img src="{{asset('Studentpublic/images/message.png')}}" class="" alt="">
+                            <span>{{\App\Http\Controllers\QuestionController::getAllDegreesForStudent()}}</span>
+                            <h3>إجمالي النقاط</h3>
+                        </div>
+                        <div class="col-md-6 left">
+                            <div class="img">
+                                <img src="{{asset('Studentpublic/images/cup.png')}}" class="" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                @php
-
-                    $yesterday=date('Y-m-d',strtotime("-1 days"));
-                @endphp
-                <div class="col-md-4 col-sm-12 today">
-                    <div class="split_right"></div>
-                    <div class="split_left"></div>
-                    <div class="col-md-6 right">
-                         <img src="{{asset('Studentpublic/images/message.png')}}" class="" alt="">
-                        <span>{{App\Http\Controllers\StudentDashboard::getPointsForStudent( date("Y-m-d"),$lesson_plan_id)}}</span>
-                        <h3>نقـــاط اليوم</h3>
-                    </div>
-                    <div class="col-md-6 left">
-                        <div class="img">
-                            <img src="{{asset('Studentpublic/images/calender.png')}}" class="" alt="">
+                    @php
+    
+                        $yesterday=date('Y-m-d',strtotime("-1 days"));
+                    @endphp
+                    <div class="col-md-4 col-sm-12 today point">
+                        <div class="split_right"></div>
+                        <div class="split_left"></div>
+                        <div class="col-md-6 right">
+                                <img src="{{asset('Studentpublic/images/message.png')}}" class="" alt="">
+                            <span>{{App\Http\Controllers\StudentDashboard::getPointsForStudent( date("Y-m-d"),$lesson_plan_id)}}</span>
+                            <h3>نقـــاط اليوم</h3>
+                        </div>
+                        <div class="col-md-6 left">
+                            <div class="img">
+                                <img src="{{asset('Studentpublic/images/calender.png')}}" class="" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-12 past">
-                    <div class="split_right"></div>
-                    <div class="split_left"></div>
-                    <div class="col-md-6 right">
-                        <img src="{{asset('Studentpublic/images/message.png')}}" class="" alt="">
-                        <span>{{App\Http\Controllers\StudentDashboard::getPointsForStudent($yesterday,$lesson_plan_id)}}</span>
-                        <h3> نقـــاط أمــس</h3>
-                    </div>
-                    <div class="col-md-6 left">
-                        <div class="img">
-                            <img src="{{asset('Studentpublic/images/calender2.png')}}" class="" alt="">
+                    <div class="col-md-4 col-sm-12 past point">
+                        <div class="split_right"></div>
+                        <div class="split_left"></div>
+                        <div class="col-md-6 right">
+                            <img src="{{asset('Studentpublic/images/message.png')}}" class="" alt="">
+                            <span>{{App\Http\Controllers\StudentDashboard::getPointsForStudent($yesterday,$lesson_plan_id)}}</span>
+                            <h3> نقـــاط أمــس</h3>
+                        </div>
+                        <div class="col-md-6 left">
+                            <div class="img">
+                                <img src="{{asset('Studentpublic/images/calender2.png')}}" class="" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>

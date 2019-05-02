@@ -362,7 +362,7 @@ a {
 .form-holder span {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 110%;
     transform: translateY(-50%);
     font-size: 15px;
     color: #333;

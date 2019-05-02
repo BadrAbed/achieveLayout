@@ -28,6 +28,14 @@ $(document).ready(function() {
     $(".prev").click(function() {
         $(".imgs").prepend($(".imgs a:last-of-type"));
     });
+    // 
+    $(".points .left").click(function() {
+        $(".points_slide").append($(".points_slide .point:first-of-type"));
+    });
+
+    $(".points .right").click(function() {
+        $(".points_slide").prepend($(".points_slide .point:last-of-type"));
+    });
     //=====  #Slider Arrows ===== 
     //===== Slider Dots ===== 
     $(".dots .dot").hover(
