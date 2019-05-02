@@ -35,30 +35,15 @@
                     <ul class="submenu">
                         <li><a href="{{url('')}}/logout">تسجيل خروج</a></li>
                     </ul>
-                </li>
-                
-            </ul>
-            {{-- Menu Small Screen --}}
-            <ul id="menu_small_screen">
-                <li>
-                    <span>احمد</span>
-                    <img class="user" src="{{asset('Studentpublic/images/user.png')}}" class="" alt="">
-                </li>
-                <hr>
-                <li>
-                    <input id="check01" type="checkbox" name="menu"/>
-                    <label for="check01">
-                            60
-                       نقطـــة</label>
-                    <ul class="submenu">
+                    <ul class="submenu_small_screen">
                         <li><a href="{{url('studentDashboard')}}"> الرئيسة</a></li>
                         <li><a href="{{url('studentLessons')}}">عرض الدروس</a></li>
                         <li><a href="{{url('')}}/logout">تسجيل خروج</a></li>
                     </ul>
+    
                 </li>
                 
             </ul>
-            {{-- #Menu Small Screen --}}
             @endif
             @endif
         </div>

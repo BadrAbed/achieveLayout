@@ -1,12 +1,12 @@
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
     #header .left .links {
         display: none;
     }
-    #header ul#menu {
+    #header ul.submenu {
         display: none;
     }
-    #header ul#menu_small_screen {
-        display: inline;
+    #header ul.submenu_small_screen {
+        display: block;
     }
     .StudentDashboard .row {
         margin: auto;
@@ -124,4 +124,91 @@
     #return-to-top i {
         margin: 0;
     }
+}
+@media (max-width: 767px) {
+    #header .row {
+        margin: auto;
+        width: 100%;
+    }
+    #header .row .col-md-3,
+    #header .row .col-md-9 {
+        width: 50%;
+    }
+    #header .row .col-md-9 {
+        top: 0.5rem;
+    }
+    .breadcrumb .row {
+        margin: auto;
+        width: 100%;
+    }
+    .StudentDashboard .row {
+        margin: auto;
+        width: 100%;
+    }
+    .StudentDashboard .row.show {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .StudentDashboard .lessons .left p {
+        max-width: 90%;
+        min-height: 145px;
+        max-height: 145px;
+        width: 90%;
+        height: 145px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    .StudentDashboard .level .row {
+        padding: 2rem 0.5rem;
+    }
+    .StudentDashboard .level .row .col-xl-2 {
+        margin: auto;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .StudentDashboard .level .right span.pom {
+        right: 41.5%;
+    }
+    .StudentDashboard .level .left {
+        margin: auto;
+        top: 0;
+    }
+    .StudentDashboard .gallery .row .arrows {
+        height: 0;
+        width: 93%;
+        bottom: 45%;
+    }
+    .StudentDashboard .gallery .row .arrows i.prev {
+        margin-right: -1rem;
+    }
+    .StudentDashboard .points .row .caret {
+        display: inline-flex;
+        width: 98%;
+        bottom: 20%;
+    }
+    .StudentDashboard .points .row .caret i.left {
+        margin-left: 0;
+    }
+    .StudentDashboard .points .row .caret i.right {
+        margin-right: 1rem;
+    }
+    div.footer .row {
+        margin: auto;
+        width: 85%;
+        padding: 1rem 0;
+        padding-bottom: 0;
+    }
+    div.footer .row div:first-child {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    div.footer h5 {
+        text-align: center;
+    }
+
 }
